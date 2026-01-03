@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE Set-up (VS Code) | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">💻 IDE Set-up (VS Code)</h1>
+            <p class="page-subtitle">Configuring your Integrated Development Environment</p>
+        </header>
+
+        <section class="content-section">
+            <div class="callout info">
+                <span class="callout-icon">📝</span>
+                <div class="callout-content">
+                    We will be using <strong>Visual Studio Code (VS Code)</strong>, a free, open-source, lightweight code editor developed by Microsoft. It's one of the most popular IDEs in the world!
+                </div>
+            </div>
+        </section>
+
+        <!-- Section A: Installation -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">📥</span> A. Installation</h2>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Download VS Code</h3>
+                <div class="step-content">
+                    <p>Go to the <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener" class="content-link">Visual Studio Code Download Page</a>.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Install</h3>
+                <div class="step-content">
+                    <p>Download and run the installer for your OS (Windows, macOS, or Linux).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Orientation -->
+        <section class="content-section" id="basics">
+            <h2 class="section-title"><span class="icon">🧭</span> B. Orientation & Navigation</h2>
+
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Activity Bar (Far Left)</div>
+                    <div class="definition-text">The narrow strip with icons for Explorer (files), Search, Source Control (Git), and Extensions. This is your main navigation hub.</div>
+                </div>
+                <div class="definition-card hover-lift" style="border-left-color: var(--accent-pink);">
+                    <div class="definition-term">Command Palette</div>
+                    <div class="definition-text">
+                        <strong>The most powerful tool in VS Code!</strong><br><br>
+                        <strong>Shortcut:</strong> <code>Ctrl + Shift + P</code> (Windows) or <code>Cmd + Shift + P</code> (Mac)<br><br>
+                        <strong>Usage:</strong> Type commands here to do almost anything.
+                    </div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Terminal</div>
+                    <div class="definition-text">Toggle the built-in command line with <code>Ctrl + ~</code> (tilde). This is where you can run Git commands directly!</div>
+                </div>
+            </div>
+
+            <div class="callout tip">
+                <span class="callout-icon">⌨️</span>
+                <div class="callout-content">
+                    <strong>Pro Tip:</strong> The Command Palette is your best friend! If you ever forget how to do something, just open it and start typing what you want to do.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Extensions -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🧩</span> C. [Optional] Exploration: Essential Extensions</h2>
+
+            <p style="margin-bottom: var(--space-md);">Click the <strong>Extensions icon</strong> (looks like 4 squares) in the Activity Bar and install:</p>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Live Server</h3>
+                <div class="step-content">
+                    <p><strong>by Ritwick Dey</strong></p>
+                    <p>Launches a local development server to view webpages. Perfect for testing HTML/CSS projects instantly!</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Prettier</h3>
+                <div class="step-content">
+                    <p><strong>by Prettier</strong></p>
+                    <p>Automatically formats code. Makes your code look clean and consistent with just one save!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: AI Assistance -->
+        <section class="content-section" id="ai">
+            <h2 class="section-title"><span class="icon">🤖</span> D. [Optional] Exploration: AI-Assistance & Prompting</h2>
+
+            <!-- Tabs for different AI tools -->
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="copilot">GitHub Copilot</button>
+                    <button class="tab-btn" data-tab="other-ai">Other AI Tools</button>
+                    <button class="tab-btn" data-tab="prompting">Prompting Tips</button>
+                </div>
+
+                <!-- GitHub Copilot Tab -->
+                <div class="tab-content active" id="copilot">
+                    <h3 style="color: var(--accent-cyan); margin-bottom: var(--space-md);">Setting up GitHub Copilot (free version) - Recommended</h3>
+
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Install</h3>
+                        <div class="step-content">
+                            <p>In the VS Code Extensions tab, search for and install <strong>GitHub Copilot</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Authenticate</h3>
+                        <div class="step-content">
+                            <p>A popup will appear asking you to sign in to GitHub. Click <strong>Allow</strong> and sign in with your account.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Verify</h3>
+                        <div class="step-content">
+                            <p>Look for the small Copilot icon (a little alien/pilot face) in the bottom-right corner of the window. If it spins or has a line through it, click it to check your status.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3 class="step-title">Usage</h3>
+                        <div class="step-content">
+                            <p>Start typing code, and ghost text will appear. Press <strong>Tab</strong> to accept suggestions. You can also ask Copilot what you want to make, and it will write code for you!</p>
+                            <p style="margin-top: var(--space-sm);"><em>Docs:</em> <a href="https://code.visualstudio.com/docs/copilot/overview" target="_blank" rel="noopener" class="content-link">GitHub Copilot in VS Code Overview</a></p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">5</span>
+                        <h3 class="step-title">Want more from Copilot?</h3>
+                        <div class="step-content">
+                            <p>As a student, you can get free access to <strong>Copilot Pro</strong> via GitHub Education. <a href="https://education.github.com/benefits" target="_blank" rel="noopener" class="content-link">See how to apply</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other AI Tools Tab -->
+                <div class="tab-content" id="other-ai">
+                    <h3 style="color: var(--accent-cyan); margin-bottom: var(--space-md);">Other AI Coding Tools</h3>
+
+                    <div class="definition-grid">
+                        <div class="definition-card hover-lift">
+                            <div class="definition-term">Claude Code</div>
+                            <div class="definition-text">
+                                You can install extensions like "Claude Dev" to use Anthropic's Claude models directly in your editor.
+                                <br><br>
+                                <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener" class="content-link">Claude Code in VS Code Docs</a>
+                            </div>
+                        </div>
+                        <div class="definition-card hover-lift">
+                            <div class="definition-term">Gemini Code Assist</div>
+                            <div class="definition-text">
+                                Google's AI assistant plugin for VS Code.
+                                <br><br>
+                                <a href="https://cloud.google.com/gemini/docs/codeassist/overview" target="_blank" rel="noopener" class="content-link">Gemini Code Assist Docs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prompting Tips Tab -->
+                <div class="tab-content" id="prompting">
+                    <h3 style="color: var(--accent-cyan); margin-bottom: var(--space-md);">AI Prompting Best-Practices</h3>
+
+                    <p style="margin-bottom: var(--space-md);">When asking AI to generate code, specificity is key. Use the <strong>R.T.R.O. framework:</strong></p>
+
+                    <div class="definition-grid">
+                        <div class="definition-card hover-lift" style="border-left-color: var(--accent-pink);">
+                            <div class="definition-term">R - Role</div>
+                            <div class="definition-text">Who is the AI? (e.g., "Expert React Developer", "Data Science Tutor")</div>
+                        </div>
+                        <div class="definition-card hover-lift" style="border-left-color: var(--accent-purple);">
+                            <div class="definition-term">T - Task</div>
+                            <div class="definition-text">What exactly do you want it to do? (e.g., "Write a function", "Debug this error")</div>
+                        </div>
+                        <div class="definition-card hover-lift" style="border-left-color: var(--accent-cyan);">
+                            <div class="definition-term">R - Requirements (Context)</div>
+                            <div class="definition-text">What constraints exist? (e.g., "Use Python 3.9", "No external libraries", "Explain it simply")</div>
+                        </div>
+                        <div class="definition-card hover-lift" style="border-left-color: var(--accent-orange);">
+                            <div class="definition-term">O - Output</div>
+                            <div class="definition-text">How should the answer look? (e.g., "Code block only", "Step-by-step list")</div>
+                        </div>
+                    </div>
+
+                    <div class="callout tip" style="margin-top: var(--space-lg);">
+                        <span class="callout-icon">💡</span>
+                        <div class="callout-content">
+                            <strong>Example Prompt:</strong><br><br>
+                            "Act as a Front-End Engineering Instructor <em>(Role)</em>. Write a CSS rule to center a div horizontally and vertically <em>(Task)</em>. You must use Flexbox and ensure it works on mobile screens <em>(Requirements)</em>. Provide the code snippet followed by a one-sentence explanation <em>(Output)</em>."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section E: Themes -->
+        <section class="content-section" id="themes">
+            <h2 class="section-title"><span class="icon">🎨</span> E. [Optional] Exploration: Themes & Icons</h2>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Browse Themes</h3>
+                <div class="step-content">
+                    <p>Download themes and icon packs of choice from the extension marketplace.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Open Command Palette</h3>
+                <div class="step-content">
+                    <p><code>Ctrl/Cmd + Shift + P</code></p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Change Color Theme</h3>
+                <div class="step-content">
+                    <p>Type <strong>"Preferences: Color Theme"</strong> and press Enter.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3 class="step-title">Preview & Select</h3>
+                <div class="step-content">
+                    <p>Use arrow keys to preview and select a color scheme.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">5</span>
+                <h3 class="step-title">Change File Icons</h3>
+                <div class="step-content">
+                    <p>Do the same for <strong>"Preferences: File Icon Theme"</strong></p>
+                </div>
+            </div>
+
+            <div class="callout tip">
+                <span class="callout-icon">🌟</span>
+                <div class="callout-content">
+                    <strong>Popular Themes:</strong> One Dark Pro, Dracula, GitHub Theme, Tokyo Night, Catppuccin
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav-buttons">
+            <a href="github-desktop.html" class="nav-btn prev">
+                <span>←</span> GitHub Desktop Set-up
+            </a>
+            <a href="creating-repo.html" class="nav-btn next">
+                Creating a Repository <span>→</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Setup Roadmap | Making Thinking Visible</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Museo+Moderno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- OpenDyslexic Font for Accessibility -->
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <!-- tsParticles for star effects -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Star Particle Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Shooting Stars -->
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="roadmap-container">
+        <header class="hero">
+            <h1 class="glowing-title">
+                <span class="title-decoration">✦</span>
+                Setting Up GitHub
+                <span class="title-decoration">✦</span>
+            </h1>
+            <p class="subtitle">Your Cosmic Journey Through Version Control</p>
+            <div class="sparkle-container">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">⭐</span>
+                <span class="sparkle">💫</span>
+            </div>
+        </header>
+
+        <!-- Interactive Roadmap SVG -->
+        <div class="roadmap-wrapper">
+            <svg class="roadmap-svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+                <!-- Connection Lines -->
+                <defs>
+                    <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#c44569;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="lineGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <!-- Main horizontal line -->
+                <path class="connection-line main-line" d="M 100 300 L 400 300" stroke="url(#lineGradient1)" stroke-width="3" fill="none"/>
+                <path class="connection-line main-line" d="M 400 300 L 550 300" stroke="#444" stroke-width="3" fill="none"/>
+                <path class="connection-line main-line" d="M 550 300 L 700 300" stroke="#444" stroke-width="3" fill="none"/>
+
+                <!-- Branches from IDE setup -->
+                <path class="connection-line branch-line" d="M 400 300 L 280 180" stroke="url(#lineGradient1)" stroke-width="2" fill="none"/>
+                <path class="connection-line branch-line" d="M 400 300 L 280 420" stroke="url(#lineGradient1)" stroke-width="2" fill="none"/>
+                <path class="connection-line branch-line" d="M 400 300 L 400 420" stroke="url(#lineGradient2)" stroke-width="2" fill="none"/>
+
+                <!-- Optional exploration dashed lines -->
+                <path class="connection-line dashed-line" d="M 400 200 C 450 150, 500 150, 550 150" stroke="url(#lineGradient2)" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+
+                <!-- Repository connections -->
+                <path class="connection-line repo-line" d="M 700 300 L 850 200" stroke="url(#lineGradient3)" stroke-width="3" fill="none"/>
+                <path class="connection-line repo-line" d="M 700 300 L 850 400" stroke="url(#lineGradient3)" stroke-width="3" fill="none"/>
+                <path class="connection-line repo-line" d="M 850 200 L 1000 300" stroke="url(#lineGradient3)" stroke-width="3" fill="none"/>
+                <path class="connection-line repo-line" d="M 850 400 L 1000 300" stroke="url(#lineGradient3)" stroke-width="3" fill="none"/>
+
+                <!-- Updating to GitHub Pages -->
+                <path class="connection-line final-line" d="M 1000 300 L 1120 200" stroke="url(#lineGradient3)" stroke-width="2" fill="none"/>
+
+                <!-- Optional exploration from updating -->
+                <path class="connection-line dashed-line" d="M 1000 350 C 1050 400, 1080 400, 1120 380" stroke="url(#lineGradient1)" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+            </svg>
+
+            <!-- Roadmap Nodes -->
+            <div class="roadmap-nodes">
+                <!-- Definitions & Lingo -->
+                <a href="pages/definitions.html" class="node node-definitions" style="left: 2%; top: 42%;">
+                    <div class="node-content node-square">
+                        <span class="node-icon">📖</span>
+                        <span class="node-label">Definitions & Lingo</span>
+                    </div>
+                    <div class="node-glow"></div>
+                </a>
+
+                <!-- GitHub Desktop Set-up -->
+                <a href="pages/github-desktop.html" class="node node-pink" style="left: 17%; top: 18%;">
+                    <div class="node-content node-circle">
+                        <span class="node-icon">🖥️</span>
+                        <span class="node-label">GitHub Desktop Set-up</span>
+                    </div>
+                    <div class="node-glow pink-glow"></div>
+                </a>
+
+                <!-- GitHub Profile Set-up -->
+                <a href="pages/github-profile.html" class="node node-pink" style="left: 17%; top: 62%;">
+                    <div class="node-content node-circle">
+                        <span class="node-icon">👤</span>
+                        <span class="node-label">GitHub Profile Set-up</span>
+                    </div>
+                    <div class="node-glow pink-glow"></div>
+                </a>
+
+                <!-- IDE Set-up (Diamond) -->
+                <a href="pages/ide-setup.html" class="node node-diamond-container" style="left: 30%; top: 42%;">
+                    <div class="node-content node-diamond">
+                        <span class="node-icon">💻</span>
+                        <span class="node-label">IDE Set-up</span>
+                    </div>
+                    <div class="node-glow diamond-glow"></div>
+                </a>
+
+                <!-- Optional: Themes & Extensions -->
+                <a href="pages/ide-setup.html#themes" class="node node-optional" style="left: 25%; top: 5%;">
+                    <div class="node-content node-circle-dashed">
+                        <span class="node-icon">🎨</span>
+                        <span class="node-label">Themes, Icons & Extensions</span>
+                    </div>
+                </a>
+
+                <!-- Optional: AI Assistance -->
+                <a href="pages/ide-setup.html#ai" class="node node-optional" style="left: 38%; top: 5%;">
+                    <div class="node-content node-circle-dashed">
+                        <span class="node-icon">🤖</span>
+                        <span class="node-label">AI Coding Assistance</span>
+                    </div>
+                </a>
+
+                <!-- VS Code Basics -->
+                <a href="pages/ide-setup.html#basics" class="node node-purple" style="left: 30%; top: 62%;">
+                    <div class="node-content node-circle">
+                        <span class="node-icon">⌨️</span>
+                        <span class="node-label">VS Code Basics</span>
+                    </div>
+                    <div class="node-glow purple-glow"></div>
+                </a>
+
+                <!-- Creating a Repository -->
+                <a href="pages/creating-repo.html" class="node node-main" style="left: 50%; top: 42%;">
+                    <div class="node-content node-circle-large">
+                        <span class="node-icon">📁</span>
+                        <span class="node-label">Creating a Repository</span>
+                    </div>
+                    <div class="node-glow"></div>
+                </a>
+
+                <!-- Remote (GitHub Website) -->
+                <a href="pages/updating-repo.html#remote" class="node node-red" style="left: 65%; top: 20%;">
+                    <div class="node-content node-circle">
+                        <span class="node-icon">🌐</span>
+                        <span class="node-label">Remote (GitHub Website)</span>
+                    </div>
+                    <div class="node-glow red-glow"></div>
+                </a>
+
+                <!-- Local (GitHub Desktop) -->
+                <a href="pages/updating-repo.html#local" class="node node-red" style="left: 65%; top: 58%;">
+                    <div class="node-content node-circle">
+                        <span class="node-icon">💾</span>
+                        <span class="node-label">Local (GitHub Desktop)</span>
+                    </div>
+                    <div class="node-glow red-glow"></div>
+                </a>
+
+                <!-- Open Source Workflow Box -->
+                <a href="pages/templates-opensource.html" class="node node-workflow" style="left: 57%; top: 42%;">
+                    <div class="node-content node-box">
+                        <span class="node-label-small">Open-source workflow, templates, pushing & pulling</span>
+                    </div>
+                </a>
+
+                <!-- Updating a Repository -->
+                <a href="pages/updating-repo.html" class="node node-red" style="left: 80%; top: 42%;">
+                    <div class="node-content node-circle-large">
+                        <span class="node-icon">🔄</span>
+                        <span class="node-label">Updating a Repository</span>
+                    </div>
+                    <div class="node-glow red-glow"></div>
+                </a>
+
+                <!-- GitHub Pages Deployment -->
+                <a href="pages/github-pages.html" class="node node-deployment" style="left: 92%; top: 20%;">
+                    <div class="node-content node-circle">
+                        <span class="node-icon">🚀</span>
+                        <span class="node-label">Deploying with GitHub Pages</span>
+                    </div>
+                    <div class="node-glow deployment-glow"></div>
+                </a>
+
+                <!-- Optional: Profile Customization -->
+                <a href="pages/github-profile.html#customization" class="node node-optional" style="left: 92%; top: 58%;">
+                    <div class="node-content node-circle-dashed">
+                        <span class="node-icon">✨</span>
+                        <span class="node-label">GitHub Profile Customization</span>
+                    </div>
+                </a>
+
+                <!-- Optional Exploration Labels -->
+                <div class="optional-label" style="left: 32%; top: 15%;">(optional) exploration</div>
+                <div class="optional-label" style="left: 88%; top: 72%;">(optional) exploration</div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation (shown on smaller screens) -->
+        <nav class="mobile-nav">
+            <h2>Navigate Your Journey</h2>
+            <div class="mobile-nav-grid">
+                <a href="pages/definitions.html" class="mobile-nav-item">
+                    <span class="nav-icon">📖</span>
+                    <span>Definitions & Lingo</span>
+                </a>
+                <a href="pages/github-profile.html" class="mobile-nav-item pink">
+                    <span class="nav-icon">👤</span>
+                    <span>GitHub Profile Set-up</span>
+                </a>
+                <a href="pages/github-desktop.html" class="mobile-nav-item pink">
+                    <span class="nav-icon">🖥️</span>
+                    <span>GitHub Desktop Set-up</span>
+                </a>
+                <a href="pages/ide-setup.html" class="mobile-nav-item purple">
+                    <span class="nav-icon">💻</span>
+                    <span>IDE Set-up (VS Code)</span>
+                </a>
+                <a href="pages/creating-repo.html" class="mobile-nav-item">
+                    <span class="nav-icon">📁</span>
+                    <span>Creating a Repository</span>
+                </a>
+                <a href="pages/updating-repo.html" class="mobile-nav-item red">
+                    <span class="nav-icon">🔄</span>
+                    <span>Updating a Repository</span>
+                </a>
+                <a href="pages/templates-opensource.html" class="mobile-nav-item red">
+                    <span class="nav-icon">🔀</span>
+                    <span>Templates & Open Source</span>
+                </a>
+                <a href="pages/github-pages.html" class="mobile-nav-item deployment">
+                    <span class="nav-icon">🚀</span>
+                    <span>GitHub Pages Deployment</span>
+                </a>
+            </div>
+        </nav>
+
+        <footer class="roadmap-footer">
+            <p>Made with 💜 for Engineering Students</p>
+            <p class="hint">Click on any location to begin your journey!</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates & Open Source | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">🔀 Templates & Open Source</h1>
+            <p class="page-subtitle">Build on the work of others and contribute back</p>
+        </header>
+
+        <!-- Section A: Using a Template -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">📋</span> A. Using a Template</h2>
+
+            <div class="callout info">
+                <span class="callout-icon">💡</span>
+                <div class="callout-content">
+                    Templates let you start a new project with pre-built structure and files. It's like getting a head start!
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Find a Template</h3>
+                <div class="step-content">
+                    <p>Navigate to a Template Repository URL (your instructor may provide one, or find one on GitHub).</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Use the Template</h3>
+                <div class="step-content">
+                    <p>Click <strong>Use this template</strong> → <strong>Create a new repository</strong>.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Name Your New Repo</h3>
+                <div class="step-content">
+                    <p>Give your new repository a name and click <strong>Create</strong>.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3 class="step-title">Start Working!</h3>
+                <div class="step-content">
+                    <p>You now have an independent remote copy of the repo to Clone and edit. The template owner won't see your changes!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Forking & Pull Requests -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🌱</span> B. Forking & Pull Requests (Open Source Workflow)</h2>
+
+            <div class="callout info">
+                <span class="callout-icon">🌍</span>
+                <div class="callout-content">
+                    This is how open-source collaboration works! You can contribute to any public project on GitHub using this workflow.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Fork</h3>
+                <div class="step-content">
+                    <p>Click <strong>Fork</strong> on the original repo (on GitHub browser) to create a copy on your account.</p>
+                    <div class="callout tip">
+                        <span class="callout-icon">🍴</span>
+                        <div class="callout-content">
+                            <strong>Fork vs. Template:</strong><br>
+                            A <em>Fork</em> maintains a connection to the original repo, allowing you to submit changes back. A <em>Template</em> creates a completely independent copy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Clone</h3>
+                <div class="step-content">
+                    <p>Clone <strong>your fork</strong> (remote) to your computer (local).</p>
+                    <p>The URL will be: <code>github.com/YOUR-USERNAME/repo-name</code></p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Edit & Push</h3>
+                <div class="step-content">
+                    <p>Make changes and push to your fork (your copy of the original repo).</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3 class="step-title">Pull Request (PR)</h3>
+                <div class="step-content">
+                    <p>This is how you propose your changes to the original project!</p>
+                    <ol>
+                        <li>Go to the <strong>Original Repository</strong></li>
+                        <li>Click <strong>Pull Requests</strong> tab</li>
+                        <li>Click <strong>New Pull Request</strong></li>
+                        <li>Select <strong>"Compare across forks"</strong></li>
+                        <li>Choose your fork and branch</li>
+                        <li>Write a description of your changes</li>
+                        <li>Submit!</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Comparison -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">⚖️</span> Template vs. Fork: Quick Comparison</h2>
+
+            <div class="definition-grid">
+                <div class="definition-card hover-lift" style="border-left-color: var(--accent-cyan);">
+                    <div class="definition-term">📋 Template</div>
+                    <div class="definition-text">
+                        <ul>
+                            <li>Creates independent copy</li>
+                            <li>No connection to original</li>
+                            <li>Best for: Starting new projects</li>
+                            <li>Can't submit changes back</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="definition-card hover-lift" style="border-left-color: var(--accent-pink);">
+                    <div class="definition-term">🍴 Fork</div>
+                    <div class="definition-text">
+                        <ul>
+                            <li>Creates connected copy</li>
+                            <li>Linked to original repo</li>
+                            <li>Best for: Contributing to projects</li>
+                            <li>Can submit Pull Requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Open Source Workflow Diagram -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🔄</span> The Open Source Workflow</h2>
+
+            <div class="code-block" style="text-align: center; font-size: 0.9rem;">
+┌─────────────────────────────────────────────────────┐
+│           ORIGINAL REPOSITORY                        │
+│         (Someone else's project)                     │
+└──────────────────────┬──────────────────────────────┘
+                       │
+                   ↓ FORK ↓
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│              YOUR FORK                               │
+│        (Your copy on GitHub)                         │
+└──────────────────────┬──────────────────────────────┘
+                       │
+                  ↓ CLONE ↓
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│              YOUR COMPUTER                           │
+│            (Make your changes)                       │
+└──────────────────────┬──────────────────────────────┘
+                       │
+              ↑ PUSH TO YOUR FORK ↑
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│              YOUR FORK                               │
+│          (Now has your changes)                      │
+└──────────────────────┬──────────────────────────────┘
+                       │
+              ↓ PULL REQUEST ↓
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│           ORIGINAL REPOSITORY                        │
+│    (Owner reviews and may merge your changes!)       │
+└─────────────────────────────────────────────────────┘
+            </div>
+        </section>
+
+        <div class="try-it-box">
+            <h4>✨ Open Source is Awesome!</h4>
+            <p>Contributing to open source is a great way to learn, build your portfolio, and give back to the community. Start small - even fixing a typo in documentation counts!</p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="updating-repo.html" class="nav-btn prev">
+                <span>←</span> Updating a Repository
+            </a>
+            <a href="github-pages.html" class="nav-btn next">
+                GitHub Pages Deployment <span>→</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

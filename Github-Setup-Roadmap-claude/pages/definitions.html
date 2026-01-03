@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definitions & Lingo | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">📖 Definitions & Lingo</h1>
+            <p class="page-subtitle">Master the vocabulary of version control before you begin</p>
+        </header>
+
+        <section class="content-section">
+            <div class="callout info">
+                <span class="callout-icon">💡</span>
+                <div class="callout-content">
+                    <strong>Pro Tip:</strong> Bookmark this page! These terms will come up throughout your GitHub journey. Understanding them makes everything else click into place.
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🛠️</span> Development Tools</h2>
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">IDE (Integrated Development Environment)</div>
+                    <div class="definition-text">A software application that bundles developer tools, like a code editor, debugger, and compiler, into a single interface (e.g. VS Code, Cursor, Google Antigravity).</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Terminal (Command Line)</div>
+                    <div class="definition-text">A text-based interface used to give instructions to your computer. In VS Code, this is built-in.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Workspace</div>
+                    <div class="definition-text">In VS Code, this refers to the root folder of your project, including all its specific settings and configurations.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🔄</span> Version Control Basics</h2>
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Version Control (Git)</div>
+                    <div class="definition-text">A system that records changes to a file or set of files over time so that you can recall specific versions later.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Repository (Repo)</div>
+                    <div class="definition-text">The fundamental unit of GitHub. It is a folder that contains all your project files and the revision history for each file.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🌐</span> Remote vs. Local</h2>
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift" style="border-left-color: var(--accent-red);">
+                    <div class="definition-term">Remote</div>
+                    <div class="definition-text">The version of your repository hosted on the internet (GitHub.com). Think of it as the "cloud" copy that everyone can access.</div>
+                </div>
+                <div class="definition-card hover-lift" style="border-left-color: var(--accent-cyan);">
+                    <div class="definition-term">Local</div>
+                    <div class="definition-text">The version of your repository stored on your physical computer's hard drive. This is where you do your actual work.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🚀</span> Core Git Actions</h2>
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Clone</div>
+                    <div class="definition-text">The action of downloading a Remote repository to your Local machine to create a connected copy.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Commit</div>
+                    <div class="definition-text">A snapshot of your local files at a specific point in time. You must write a "Commit Message" to explain what changed.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Push</div>
+                    <div class="definition-text">Uploading your local repository content (commits) to a remote repository. Send your changes to the cloud!</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Pull</div>
+                    <div class="definition-text">Fetching, downloading, and altering content from a remote repository and immediately updating the local repository to match that content.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🌿</span> Branching & Merging</h2>
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Branch</div>
+                    <div class="definition-text">A parallel version of a repository. It is contained within the repository but does not affect the primary (usually called main) branch until you merge it.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Merge</div>
+                    <div class="definition-text">Combines changes from one branch (like a feature branch) into another (like the main branch).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">📝</span> File Types</h2>
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Markdown (.md)</div>
+                    <div class="definition-text">A lightweight markup language used to format text (like headings, bolding, and lists) in plain-text files. README files are written in Markdown!</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="try-it-box">
+            <h4>✨ Quick Memory Check!</h4>
+            <p>Can you explain the difference between Push and Pull to a friend? What about Remote vs. Local? Understanding these pairs is key!</p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="../index.html" class="nav-btn prev">
+                <span>←</span> Roadmap Home
+            </a>
+            <a href="github-profile.html" class="nav-btn next">
+                GitHub Profile Set-up <span>→</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

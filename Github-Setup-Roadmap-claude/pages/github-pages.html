@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Deployment | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">🚀 GitHub Pages Deployment</h1>
+            <p class="page-subtitle">Turn your repository into a live website!</p>
+        </header>
+
+        <section class="content-section">
+            <div class="callout info">
+                <span class="callout-icon">🌐</span>
+                <div class="callout-content">
+                    GitHub Pages is a free hosting service that takes HTML, CSS, and JavaScript files directly from your repository and publishes them as a website. Your site will be live at <code>username.github.io/repo-name</code>!
+                </div>
+            </div>
+
+            <div class="callout tip">
+                <span class="callout-icon">🤖</span>
+                <div class="callout-content">
+                    <strong>Feeling overwhelmed?</strong> Ask Copilot in VS Code to help you with this if it seems intimidating! It can guide you through the process step by step.
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">⚙️</span> Choose Your Deployment Method</h2>
+
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="actions">GitHub Actions (Recommended)</button>
+                    <button class="tab-btn" data-tab="branch">Deploy from Branch (Classic)</button>
+                </div>
+
+                <!-- GitHub Actions Method -->
+                <div class="tab-content active" id="actions">
+                    <div class="callout info" style="margin-bottom: var(--space-lg);">
+                        <span class="callout-icon">✨</span>
+                        <div class="callout-content">
+                            This method is more robust and allows you to customize how your site is built. It's the modern, recommended approach.
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Navigate to Your Repository</h3>
+                        <div class="step-content">
+                            <p>Go to your repository on GitHub.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Open Settings</h3>
+                        <div class="step-content">
+                            <p>Click <strong>Settings</strong> (Gear icon in the top toolbar).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Find Pages Settings</h3>
+                        <div class="step-content">
+                            <p>In the left sidebar, click <strong>Pages</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3 class="step-title">Select GitHub Actions</h3>
+                        <div class="step-content">
+                            <p>Under <strong>Build and deployment → Source</strong>, select <strong>GitHub Actions</strong> from the dropdown menu.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">5</span>
+                        <h3 class="step-title">Choose a Workflow</h3>
+                        <div class="step-content">
+                            <p>GitHub will analyze your repo and suggest a workflow. You can also ask Copilot in VS Code for help configuring your files.</p>
+                            <ul>
+                                <li>For the class template (HTML/CSS), look for the <strong>Static HTML</strong> card and click <strong>Configure</strong>.</li>
+                                <li>For custom React apps, you may need a specific Node.js workflow.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">6</span>
+                        <h3 class="step-title">Review the YAML</h3>
+                        <div class="step-content">
+                            <p>An editor will open showing a <code>.yml</code> file. You generally do not need to edit this for simple sites.</p>
+                            <div class="callout tip">
+                                <span class="callout-icon">💡</span>
+                                <div class="callout-content">
+                                    YAML files define the "recipe" for building and deploying your site. The default settings work great for most projects!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">7</span>
+                        <h3 class="step-title">Commit the Workflow</h3>
+                        <div class="step-content">
+                            <p>Click <strong>Commit changes...</strong> (green button, top right).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">8</span>
+                        <h3 class="step-title">Monitor the Build</h3>
+                        <div class="step-content">
+                            <p>Click the <strong>Actions</strong> tab in your repository.</p>
+                            <ul>
+                                <li>🟡 <strong>Yellow circle</strong> = Build in progress</li>
+                                <li>🟢 <strong>Green check</strong> = Success! Your site is live!</li>
+                                <li>🔴 <strong>Red X</strong> = Something went wrong (click to see details)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branch Method -->
+                <div class="tab-content" id="branch">
+                    <div class="callout info" style="margin-bottom: var(--space-lg);">
+                        <span class="callout-icon">📁</span>
+                        <div class="callout-content">
+                            Best for very simple, static HTML files without any build steps. Quick and easy!
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Go to Settings → Pages</h3>
+                        <div class="step-content">
+                            <p>Navigate to your repository's <strong>Settings</strong>, then click <strong>Pages</strong> in the sidebar.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Select Source</h3>
+                        <div class="step-content">
+                            <p>Under <strong>Source</strong>, select <strong>Deploy from a branch</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Choose Branch and Folder</h3>
+                        <div class="step-content">
+                            <p>Under <strong>Branch</strong>, select <strong>main</strong> (or master) and ensure the folder is <strong>/ (root)</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3 class="step-title">Save</h3>
+                        <div class="step-content">
+                            <p>Click <strong>Save</strong>. Your site will be live in a few minutes!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finding Your Site URL -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🔗</span> Finding Your Live Site</h2>
+
+            <div class="step-card">
+                <div class="step-content">
+                    <p>After deployment, your site URL will be:</p>
+                    <div class="code-block" style="text-align: center; font-size: 1.1rem;">
+https://YOUR-USERNAME.github.io/REPO-NAME/
+                    </div>
+                    <p style="margin-top: var(--space-md);">You can also find the URL in <strong>Settings → Pages</strong> at the top of the page.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Issues -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🔧</span> Troubleshooting</h2>
+
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <h4><span>❓</span> My site shows a 404 error</h4>
+                    <span class="collapsible-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner">
+                        <ul>
+                            <li>Make sure you have an <code>index.html</code> file in your repository root</li>
+                            <li>Wait a few minutes - deployment can take time</li>
+                            <li>Check the Actions tab for any build errors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <h4><span>❓</span> My CSS/images aren't loading</h4>
+                    <span class="collapsible-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner">
+                        <ul>
+                            <li>Check your file paths - they should be relative (e.g., <code>./styles.css</code> not <code>/styles.css</code>)</li>
+                            <li>Make sure filenames match exactly (case-sensitive!)</li>
+                            <li>Commit and push all your files</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <h4><span>❓</span> Changes aren't showing up</h4>
+                    <span class="collapsible-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner">
+                        <ul>
+                            <li>Hard refresh your browser (<code>Ctrl/Cmd + Shift + R</code>)</li>
+                            <li>Wait for the GitHub Action to complete (check the Actions tab)</li>
+                            <li>Make sure you pushed your changes to GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="try-it-box">
+            <h4>🎉 Congratulations!</h4>
+            <p>You've completed the GitHub Setup Roadmap! You now have all the skills to create, manage, and deploy projects using GitHub. Keep building amazing things!</p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="templates-opensource.html" class="nav-btn prev">
+                <span>←</span> Templates & Open Source
+            </a>
+            <a href="../index.html" class="nav-btn next">
+                Back to Roadmap <span>🏠</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

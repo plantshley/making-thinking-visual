@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Repository | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">📁 Creating a Repository</h1>
+            <p class="page-subtitle">Initializing a project the "Remote-First" way</p>
+        </header>
+
+        <section class="content-section">
+            <div class="callout info">
+                <span class="callout-icon">🚀</span>
+                <div class="callout-content">
+                    We're using the "Remote-First" approach, which means creating your repository on GitHub.com first, then cloning it to your computer. This is the cleanest way to start a new project!
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">✨</span> Step-by-Step Guide</h2>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Log in to GitHub</h3>
+                <div class="step-content">
+                    <p>Go to <a href="https://github.com" target="_blank" rel="noopener" class="content-link">GitHub.com</a> and sign in to your account.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Start a New Repository</h3>
+                <div class="step-content">
+                    <p>Select the <strong>+ dropdown</strong> (top-right corner) and click <strong>New repository</strong>.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Name Your Repository</h3>
+                <div class="step-content">
+                    <p>Use a specific, short name (e.g., <code>mental-model-1</code>).</p>
+                    <div class="callout tip">
+                        <span class="callout-icon">💡</span>
+                        <div class="callout-content">
+                            <strong>Naming Tips:</strong>
+                            <ul>
+                                <li>Use lowercase letters</li>
+                                <li>Replace spaces with hyphens (-)</li>
+                                <li>Keep it descriptive but concise</li>
+                                <li>Avoid special characters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3 class="step-title">Set Visibility</h3>
+                <div class="step-content">
+                    <p>Select visibility (<strong>public</strong> for this course).</p>
+                    <div class="definition-grid" style="margin-top: var(--space-md);">
+                        <div class="definition-card" style="border-left-color: var(--accent-green);">
+                            <div class="definition-term">Public</div>
+                            <div class="definition-text">Anyone can see this repository. Great for portfolios and open-source projects.</div>
+                        </div>
+                        <div class="definition-card" style="border-left-color: var(--accent-orange);">
+                            <div class="definition-term">Private</div>
+                            <div class="definition-text">Only you (and people you invite) can see this repository.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">5</span>
+                <h3 class="step-title">Initialize With Files</h3>
+                <div class="step-content">
+                    <p>This is an important step! Check these boxes:</p>
+
+                    <div class="collapsible" style="margin-top: var(--space-md);">
+                        <div class="collapsible-header">
+                            <h4><span>✅</span> Add a README file</h4>
+                            <span class="collapsible-icon">▼</span>
+                        </div>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                <p>Check this box! A README is like the front page of your project. It tells visitors what your project is about.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header">
+                            <h4><span>✅</span> Add .gitignore</h4>
+                            <span class="collapsible-icon">▼</span>
+                        </div>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                <p>Select a template based on your project type:</p>
+                                <ul>
+                                    <li><strong>Windows</strong> or <strong>macOS</strong> - for general projects</li>
+                                    <li><strong>Node</strong> - for JavaScript/Node.js projects</li>
+                                    <li><strong>Python</strong> - for Python projects</li>
+                                </ul>
+                                <p style="margin-top: var(--space-sm);">This prevents uploading hidden system files that shouldn't be in your repository!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">6</span>
+                <h3 class="step-title">Create!</h3>
+                <div class="step-content">
+                    <p>Click the big green <strong>Create repository</strong> button.</p>
+                    <p style="margin-top: var(--space-sm);">🎉 Congratulations! Your repository now exists on GitHub!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">📋</span> Quick Reference</h2>
+
+            <div class="code-block">
+Repository Settings Checklist:
+
+□ Name: something-descriptive
+□ Description: (optional but helpful)
+□ Visibility: Public or Private
+□ Initialize with:
+  ☑ README file
+  ☑ .gitignore (choose template)
+            </div>
+        </section>
+
+        <div class="try-it-box">
+            <h4>✨ Try It Now!</h4>
+            <p>Create a "Sandbox" repository right now just to practice. You can delete it later! This is a safe space to experiment.</p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="ide-setup.html" class="nav-btn prev">
+                <span>←</span> IDE Set-up
+            </a>
+            <a href="updating-repo.html" class="nav-btn next">
+                Updating a Repository <span>→</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

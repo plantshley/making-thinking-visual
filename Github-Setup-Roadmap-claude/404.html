@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost in Space | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .lost-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: var(--space-lg);
+        }
+
+        .lost-code {
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 15vw, 10rem);
+            background: var(--gradient-aurora);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: var(--space-md);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .lost-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .lost-text {
+            font-family: var(--font-body);
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin-bottom: var(--space-xl);
+        }
+
+        .lost-astronaut {
+            font-size: 5rem;
+            animation: spin 20s linear infinite;
+            margin-bottom: var(--space-lg);
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-xl);
+            background: var(--gradient-aurora);
+            border: none;
+            border-radius: var(--radius-lg);
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <main class="lost-container">
+        <div class="lost-astronaut">🧑‍🚀</div>
+        <div class="lost-code">404</div>
+        <h1 class="lost-title">Houston, We Have a Problem!</h1>
+        <p class="lost-text">
+            Looks like you've drifted off course into uncharted space.
+            The page you're looking for doesn't exist or has been moved to another galaxy.
+        </p>
+        <a href="index.html" class="home-btn">
+            <span>🚀</span> Return to Base
+        </a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

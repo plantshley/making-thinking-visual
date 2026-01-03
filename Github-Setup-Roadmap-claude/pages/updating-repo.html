@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updating a Repository | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">🔄 Updating a Repository</h1>
+            <p class="page-subtitle">The core cycle: Clone, Edit, Commit, Push</p>
+        </header>
+
+        <section class="content-section">
+            <div class="callout info">
+                <span class="callout-icon">🔁</span>
+                <div class="callout-content">
+                    This is the workflow you'll use most often! Once you understand this cycle, you're ready to collaborate on any project.
+                </div>
+            </div>
+        </section>
+
+        <!-- Step A: Cloning -->
+        <section class="content-section" id="remote">
+            <h2 class="section-title"><span class="icon">📥</span> Step A: Cloning (Remote to Local)</h2>
+
+            <p style="margin-bottom: var(--space-md);">First, you need to download your remote repository to your computer.</p>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Get the Repository URL</h3>
+                <div class="step-content">
+                    <p>On your GitHub repo page, click the green <strong>Code</strong> button.</p>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="clone-desktop">GitHub Desktop</button>
+                    <button class="tab-btn" data-tab="clone-vscode">VS Code</button>
+                    <button class="tab-btn" data-tab="clone-both">Desktop → VS Code</button>
+                </div>
+
+                <div class="tab-content active" id="clone-desktop">
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Open with GitHub Desktop</h3>
+                        <div class="step-content">
+                            <p>Click <strong>"Open with GitHub Desktop"</strong>.</p>
+                            <p>Choose the local file path for the repository folder.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="clone-vscode">
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Clone via VS Code</h3>
+                        <div class="step-content">
+                            <ol>
+                                <li>Copy the <strong>HTTPS URL</strong></li>
+                                <li>In VS Code, open the <strong>Command Palette</strong> (<code>Ctrl/Cmd + Shift + P</code>)</li>
+                                <li>Type <strong>"Git: Clone"</strong> and press Enter</li>
+                                <li>Paste the URL and select a folder</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="clone-both">
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Best of Both Worlds</h3>
+                        <div class="step-content">
+                            <ol>
+                                <li>Follow the "Open with GitHub Desktop" prompts to create the local folder</li>
+                                <li>Then open this folder as a workspace in VS Code</li>
+                            </ol>
+                            <div class="callout tip">
+                                <span class="callout-icon">💡</span>
+                                <div class="callout-content">
+                                    This method gives you the visual interface of GitHub Desktop for Git operations while using VS Code for editing!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step B: The Edit Cycle -->
+        <section class="content-section" id="local">
+            <h2 class="section-title"><span class="icon">✏️</span> Step B: The Edit Cycle</h2>
+
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="edit-desktop">Using GitHub Desktop</button>
+                    <button class="tab-btn" data-tab="edit-vscode">Using VS Code</button>
+                </div>
+
+                <!-- GitHub Desktop Method -->
+                <div class="tab-content active" id="edit-desktop">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Edit Files</h3>
+                        <div class="step-content">
+                            <p>Edit files in your local folder using any text editor.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Verify Changes</h3>
+                        <div class="step-content">
+                            <p>Open GitHub Desktop and verify changes are listed in the left panel.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Commit</h3>
+                        <div class="step-content">
+                            <p>Type a summary describing your changes and click <strong>Commit to main</strong>.</p>
+                            <div class="callout tip">
+                                <span class="callout-icon">📝</span>
+                                <div class="callout-content">
+                                    <strong>Good commit messages:</strong>
+                                    <ul>
+                                        <li>"Add navigation menu"</li>
+                                        <li>"Fix typo in README"</li>
+                                        <li>"Update styling for mobile"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3 class="step-title">Push</h3>
+                        <div class="step-content">
+                            <p>Click <strong>Push origin</strong> (top toolbar) to upload your changes to GitHub.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VS Code Method -->
+                <div class="tab-content" id="edit-vscode">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Open as Workspace</h3>
+                        <div class="step-content">
+                            <p>Go to <strong>File → Open Folder...</strong> and select your repository folder.</p>
+                            <div class="callout warning">
+                                <span class="callout-icon">⚠️</span>
+                                <div class="callout-content">
+                                    This ensures VS Code treats the folder as a distinct workspace with its own Git context. Don't just open individual files!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Make Changes & Save</h3>
+                        <div class="step-content">
+                            <p>Edit your files and save them (<code>Ctrl/Cmd + S</code>).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Open Source Control</h3>
+                        <div class="step-content">
+                            <p>Click the <strong>Source Control icon</strong> (branch logo) in the Activity Bar.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3 class="step-title">Stage Changes</h3>
+                        <div class="step-content">
+                            <p>Hover over the file name and click the <strong>+ icon</strong> to stage it.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">5</span>
+                        <h3 class="step-title">Commit</h3>
+                        <div class="step-content">
+                            <p>Type a message in the text box and click <strong>Commit</strong> (or <code>Ctrl/Cmd + Enter</code>).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">6</span>
+                        <h3 class="step-title">Sync</h3>
+                        <div class="step-content">
+                            <p>Click <strong>Sync Changes</strong> to Push/Pull with the remote repository.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Workflow -->
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🗺️</span> The Complete Workflow</h2>
+
+            <div class="code-block" style="text-align: center; font-size: 1.1rem;">
+┌─────────────────────────────────────────────────────┐
+│                    GITHUB.COM                        │
+│                   (Remote Repo)                      │
+└──────────────────────┬──────────────────────────────┘
+                       │
+                  ↓ CLONE ↓
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│                YOUR COMPUTER                         │
+│                  (Local Repo)                        │
+│                                                      │
+│    ┌─────────┐    ┌─────────┐    ┌─────────┐       │
+│    │  EDIT   │ →  │  STAGE  │ →  │ COMMIT  │       │
+│    └─────────┘    └─────────┘    └─────────┘       │
+│                                                      │
+└──────────────────────┬──────────────────────────────┘
+                       │
+                   ↑ PUSH ↑
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│                    GITHUB.COM                        │
+│              (Updated Remote Repo!)                  │
+└─────────────────────────────────────────────────────┘
+            </div>
+        </section>
+
+        <div class="try-it-box">
+            <h4>✨ Try It Now!</h4>
+            <p>In your Sandbox repo, create a text file named <code>hello.txt</code>. Add the text "Hello World," save it, and push it to GitHub using either method above. Verify you can see it on the website!</p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="creating-repo.html" class="nav-btn prev">
+                <span>←</span> Creating a Repository
+            </a>
+            <a href="templates-opensource.html" class="nav-btn next">
+                Templates & Open Source <span>→</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

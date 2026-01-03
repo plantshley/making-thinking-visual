@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Desktop Set-up | GitHub Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=MuseoModerno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <nav class="controls">
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+            <span class="toggle-text">Moonlight</span>
+        </button>
+        <button id="font-toggle" class="control-btn" aria-label="Toggle accessible fonts">
+            <span class="font-icon">Aa</span>
+            <span class="toggle-text">Accessible Fonts</span>
+        </button>
+    </nav>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">
+            <span>←</span> Back to Roadmap
+        </a>
+
+        <header class="page-header">
+            <h1 class="page-title">🖥️ GitHub Desktop Set-up</h1>
+            <p class="page-subtitle">An alternative visual interface for managing Git</p>
+        </header>
+
+        <section class="content-section">
+            <div class="callout info">
+                <span class="callout-icon">💡</span>
+                <div class="callout-content">
+                    GitHub Desktop provides a user-friendly graphical interface for Git operations. It's perfect if you prefer clicking buttons over typing commands!
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">📥</span> Installation & Setup</h2>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Download GitHub Desktop</h3>
+                <div class="step-content">
+                    <p>Visit <a href="https://desktop.github.com" target="_blank" rel="noopener" class="content-link">desktop.github.com</a> and download the installer for your operating system.</p>
+                    <div class="callout tip">
+                        <span class="callout-icon">🍎</span>
+                        <div class="callout-content">
+                            GitHub Desktop is available for both Windows and macOS. The installation process is similar on both platforms.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Sign In</h3>
+                <div class="step-content">
+                    <p>Launch the app and sign in with your GitHub browser account.</p>
+                    <ul>
+                        <li>Click <strong>"Sign in to GitHub.com"</strong></li>
+                        <li>A browser window will open for authentication</li>
+                        <li>Authorize GitHub Desktop to access your account</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Configure Git</h3>
+                <div class="step-content">
+                    <p>The app will ask for a name and email.</p>
+                    <div class="callout warning">
+                        <span class="callout-icon">⚠️</span>
+                        <div class="callout-content">
+                            <strong>Important:</strong> Use the same email address associated with your GitHub account to ensure your contributions are attributed correctly. This email will appear in your commit history.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🎯</span> What You Can Do with GitHub Desktop</h2>
+
+            <div class="definition-grid stagger">
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Clone Repositories</div>
+                    <div class="definition-text">Download any repository from GitHub to your local machine with just a few clicks.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">View Changes</div>
+                    <div class="definition-text">See exactly what files you've modified with a visual diff viewer.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Commit & Push</div>
+                    <div class="definition-text">Stage your changes, write commit messages, and push to GitHub without touching the command line.</div>
+                </div>
+                <div class="definition-card hover-lift">
+                    <div class="definition-term">Branch Management</div>
+                    <div class="definition-text">Create, switch, and merge branches with an intuitive interface.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><span class="icon">🔗</span> Connecting to VS Code</h2>
+
+            <div class="step-card">
+                <div class="step-content">
+                    <p>GitHub Desktop works seamlessly with VS Code! After cloning a repository:</p>
+                    <ol>
+                        <li>Right-click on the repository in GitHub Desktop</li>
+                        <li>Select <strong>"Open in Visual Studio Code"</strong></li>
+                        <li>Start editing your files!</li>
+                    </ol>
+                    <p>Any changes you make will automatically appear in GitHub Desktop for committing.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="try-it-box">
+            <h4>✨ Ready to Continue?</h4>
+            <p>GitHub Desktop is now set up! You'll use it alongside VS Code in the "Updating a Repository" section later.</p>
+        </div>
+
+        <nav class="nav-buttons">
+            <a href="github-profile.html" class="nav-btn prev">
+                <span>←</span> GitHub Profile Set-up
+            </a>
+            <a href="ide-setup.html" class="nav-btn next">
+                IDE Set-up <span>→</span>
+            </a>
+        </nav>
+    </main>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>
