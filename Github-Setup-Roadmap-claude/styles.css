@@ -117,7 +117,7 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: 'JetBrains Mono', monospace;
     background: var(--bg-primary);
     color: var(--text-primary);
     min-height: 100vh;
@@ -125,6 +125,8 @@ body {
     line-height: 1.6;
     transition: background var(--transition-slow), color var(--transition-slow);
 }
+
+/* Page transitions removed - no jarring flash */
 
 /* ========================================
    PARTICLE BACKGROUND
@@ -420,9 +422,9 @@ body {
 .roadmap-wrapper {
     position: relative;
     width: 100%;
-    min-height: 750px;
+    min-height: 600px;
     margin: 0 0 var(--space-xl) 0;
-    transform: scale(1.15);
+    transform: scale(1.0);
     transform-origin: center top;
 }
 
@@ -509,11 +511,15 @@ body {
 }
 
 .icon-img {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
     transition: transform var(--transition-normal);
+}
+
+[data-theme="light"] .icon-img {
+    filter: none;
 }
 
 .icon-img-mobile {
@@ -566,6 +572,15 @@ body {
 .node-diamond .node-icon,
 .node-diamond .node-label {
     transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.node-diamond .node-label {
+    line-height: 1.1;
+    padding: 0 5px;
 }
 
 .node-circle-dashed {
@@ -577,8 +592,8 @@ body {
 }
 
 .node-star-shape {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     clip-path: polygon(
         50% 0%,
         61% 35%,
@@ -591,13 +606,42 @@ body {
         2% 35%,
         39% 35%
     );
-    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    background: linear-gradient(
+        90deg,
+        #ff3399 0%,
+        #ff9933 14%,
+        #ffdd00 28%,
+        #00d4ff 42%,
+        #5599ff 56%,
+        #aa66ff 70%,
+        #ff3399 100%
+    );
+    background-size: 200% 100%;
+    animation: rainbowShift 8s linear infinite;
     border: none;
 }
 
-.node-star .node-icon {
-    font-size: 2rem;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+.node-star-decorative {
+    pointer-events: none;
+    cursor: default;
+}
+
+.node-star-decorative:hover {
+    transform: none !important;
+}
+
+.node-star-decorative .node-content {
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
 }
 
 .node-box {
@@ -608,40 +652,53 @@ body {
     border-color: var(--accent-pink);
 }
 
-/* Node Colors - Rainbow themed */
-.node-definitions .node-content {
-    border-color: #ff6b9d;
-    background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(196, 69, 105, 0.2));
+/* Node Colors - Rainbow themed (CENTER LINE ONLY) */
+.node-definitions .node-content,
+.node-purple-center .node-content,
+.node-main .node-content,
+.node-workflow .node-content,
+.node-red-center .node-content {
+    border: 3px solid transparent;
+    background-image:
+        linear-gradient(rgba(10, 10, 20, 0.85), rgba(10, 10, 20, 0.85)),
+        linear-gradient(
+            90deg,
+            #ff3399 0%,
+            #ff9933 14%,
+            #ffdd00 28%,
+            #00d4ff 42%,
+            #5599ff 56%,
+            #aa66ff 70%,
+            #ff3399 100%
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100%, 200% 100%;
+    animation: rainbowBorder 8s linear infinite;
+    position: relative;
 }
 
+@keyframes rainbowBorder {
+    0% { background-position: 0% 0%, 0% 50%; }
+    100% { background-position: 0% 0%, 200% 50%; }
+}
+
+/* Pink pairs - purple gradient */
 .node-pink .node-content {
-    border-color: #c44569;
-    background: linear-gradient(135deg, rgba(196, 69, 105, 0.2), rgba(168, 85, 247, 0.2));
+    border-color: #aa66ff;
+    background: linear-gradient(135deg, rgba(170, 102, 255, 0.2), rgba(196, 69, 105, 0.2));
 }
 
-.node-purple .node-content {
-    border-color: #6366f1;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
-}
-
-.node-main .node-content {
-    border-color: #a855f7;
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.2));
-}
-
+/* Purple and red vertical pairs - purple gradient */
+.node-purple .node-content,
 .node-red .node-content {
-    border-color: #06b6d4;
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.2));
+    border-color: #aa66ff;
+    background: linear-gradient(135deg, rgba(170, 102, 255, 0.2), rgba(99, 102, 241, 0.2));
 }
 
 .node-deployment .node-content {
     border-color: #3b82f6;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));
-}
-
-.node-workflow .node-content {
-    border-color: #a855f7;
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(6, 182, 212, 0.15));
 }
 
 .node-optional .node-content {
@@ -692,6 +749,11 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
+.node:active .node-content {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-out;
+}
+
 .node-diamond-container:hover .node-content {
     transform: rotate(45deg) scale(1.1);
 }
@@ -699,6 +761,11 @@ body {
 .node:hover .node-glow {
     opacity: 1;
     animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Smooth click effect */
+.node {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes pulse {
@@ -743,6 +810,25 @@ body {
 
 [data-theme="light"] .node:hover .node-content {
     box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+}
+
+[data-theme="light"] .node-definitions .node-content,
+[data-theme="light"] .node-purple-center .node-content,
+[data-theme="light"] .node-main .node-content,
+[data-theme="light"] .node-workflow .node-content,
+[data-theme="light"] .node-red-center .node-content {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        linear-gradient(
+            90deg,
+            #ff3399 0%,
+            #ff9933 14%,
+            #ffdd00 28%,
+            #00d4ff 42%,
+            #5599ff 56%,
+            #aa66ff 70%,
+            #ff3399 100%
+        );
 }
 
 /* Optional Labels */
@@ -832,6 +918,7 @@ body {
     text-align: center;
     padding: var(--space-xl) var(--space-md);
     color: var(--text-secondary);
+    margin-top: -80px;
 }
 
 .roadmap-footer p {
