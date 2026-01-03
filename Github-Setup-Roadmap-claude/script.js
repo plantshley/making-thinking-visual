@@ -271,19 +271,137 @@ document.head.appendChild(sparkleStyle);
 // SVG LINE ANIMATIONS
 // ========================================
 
+// ========================================
+// DYNAMIC SVG LINE DRAWING
+// ========================================
+
 function initLineAnimations() {
-    const lines = document.querySelectorAll('.connection-line');
+    const svg = document.querySelector('.roadmap-svg');
 
-    lines.forEach((line, index) => {
-        const length = line.getTotalLength ? line.getTotalLength() : 1000;
-        line.style.strokeDasharray = length;
-        line.style.strokeDashoffset = length;
+    // Clear existing lines if any (except defs)
+    const existingPath = svg.querySelectorAll('path');
+    existingPath.forEach(p => p.remove());
 
-        setTimeout(() => {
-            line.style.transition = 'stroke-dashoffset 1.5s ease-out';
-            line.style.strokeDashoffset = '0';
-        }, 500 + (index * 200));
-    });
+    const connections = [
+        // --- LEFT (Desktop/Profile Wedge) ---
+        { from: 'node-desktop', to: 'node-profile' },      // Vertical connection
+        { from: 'node-desktop', to: 'node-ide-setup' },    // Diagonal to IDE
+        { from: 'node-profile', to: 'node-ide-setup' },    // Diagonal to IDE
+        { from: 'node-definitions', to: 'node-ide-setup' }, // Horizontal Spine
+
+        // --- CENTER (IDE & VS Code) ---
+        { from: 'node-ide-setup', to: 'node-explore-top' },
+        { from: 'node-ide-setup', to: 'node-vscode' },
+        { from: 'node-ide-setup', to: 'node-create-repo' }, // Horizontal Spine
+
+        // --- RIGHT (Remote/Local Diamond) ---
+        { from: 'node-create-repo', to: 'node-remote' },      // Diamond Left-Top
+        { from: 'node-remote', to: 'node-templates' },        // Diamond Top-Right
+        { from: 'node-create-repo', to: 'node-local' },       // Diamond Left-Bottom
+        { from: 'node-local', to: 'node-templates' },         // Diamond Bottom-Right
+
+        { from: 'node-create-repo', to: 'node-update-repo' }, // Horizontal Spine
+        { from: 'node-update-repo', to: 'node-templates' },   // Horizontal Spine
+
+        // --- END ---
+        { from: 'node-templates', to: 'node-explore-right' }
+    ];
+
+    connections.forEach(conn => drawConnection(conn.from, conn.to, svg));
+
+    // Redraw on resize and load
+    const redraw = () => {
+        clearTimeout(window.resizeLineTimeout);
+        window.resizeLineTimeout = setTimeout(() => {
+            const existingPath = svg.querySelectorAll('path');
+            existingPath.forEach(p => p.remove());
+            connections.forEach(conn => drawConnection(conn.from, conn.to, svg));
+        }, 100);
+    };
+
+    window.addEventListener('resize', redraw);
+    window.addEventListener('load', redraw);
+    // Force one now just in case
+    redraw();
+}
+
+function drawConnection(fromId, toId, svg) {
+    const fromNode = document.getElementById(fromId);
+    const toNode = document.getElementById(toId);
+
+    if (!fromNode || !toNode) return;
+
+    // --- COORDINATE MAPPING (Simple Stretch) ---
+    // With preserveAspectRatio="none", the SVG stretches to fill the container.
+    // We just map percentage of width/height.
+    const svgRect = svg.getBoundingClientRect();
+    const viewBox = { w: 1200, h: 600 };
+
+    const scaleX = viewBox.w / svgRect.width;
+    const scaleY = viewBox.h / svgRect.height;
+
+    function getSVGCoordinates(elem) {
+        const rect = elem.getBoundingClientRect();
+        // Screen Center
+        const screenX = rect.left + rect.width / 2;
+        const screenY = rect.top + rect.height / 2;
+
+        // Relative to SVG Frame
+        const relX = screenX - svgRect.left;
+        const relY = screenY - svgRect.top;
+
+        return {
+            x: relX * scaleX,
+            y: relY * scaleY
+        };
+    }
+
+    const startPt = getSVGCoordinates(fromNode);
+    const endPt = getSVGCoordinates(toNode);
+
+    // --- RADIUS CALCULATION (Shape Aware) ---
+    function getNodeRadius(node) {
+        // Check for specific shapes
+        const content = node.querySelector('.node-content');
+        let radius = 50; // default fallout
+
+        if (content) {
+            if (content.classList.contains('node-circle-large')) {
+                radius = 55; // 110px width
+            } else if (content.classList.contains('node-circle') || content.classList.contains('node-circle-dashed')) {
+                radius = 47.5; // 95px width
+            } else if (node.classList.contains('node-diamond') || content.classList.contains('node-diamond')) {
+                // Diamond radius logic (reach to corner is longer)
+                radius = 60;
+            } else if (content.classList.contains('node-square')) {
+                radius = 50; // 100px width
+            }
+        }
+        return radius;
+    }
+
+    const angle = Math.atan2(endPt.y - startPt.y, endPt.x - startPt.x);
+
+    const r1 = getNodeRadius(fromNode);
+    const r2 = getNodeRadius(toNode);
+
+    const gap = 4; // Gap in SVG units
+
+    const x1 = startPt.x + Math.cos(angle) * (r1 + gap);
+    const y1 = startPt.y + Math.sin(angle) * (r1 + gap);
+    const x2 = endPt.x - Math.cos(angle) * (r2 + gap);
+    const y2 = endPt.y - Math.sin(angle) * (r2 + gap);
+
+    // --- DRAWING ---
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("class", "connection-line");
+
+    path.style.stroke = "var(--accent-cyan)";
+    path.style.strokeWidth = "2";
+
+    path.setAttribute("d", `M ${x1} ${y1} L ${x2} ${y2}`);
+
+    svg.appendChild(path);
 }
 
 // ========================================
@@ -401,7 +519,7 @@ function initScrollAnimations() {
 
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -528,11 +646,11 @@ function initTypingEffect() {
 function initTouchEffects() {
     if ('ontouchstart' in window) {
         document.querySelectorAll('.mobile-nav-item, .node').forEach(item => {
-            item.addEventListener('touchstart', function() {
+            item.addEventListener('touchstart', function () {
                 this.style.transform = 'scale(0.95)';
             });
 
-            item.addEventListener('touchend', function() {
+            item.addEventListener('touchend', function () {
                 this.style.transform = '';
             });
         });

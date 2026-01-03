@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Museo+Moderno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Museo+Moderno:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
 
     <!-- OpenDyslexic Font for Accessibility -->
     <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
@@ -19,6 +22,7 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Star Particle Background -->
     <div id="tsparticles"></div>
@@ -61,10 +65,10 @@
 
         <!-- Interactive Roadmap SVG -->
         <div class="roadmap-wrapper">
-            <svg class="roadmap-svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
-                <!-- Connection Lines -->
+            <!-- SVG Layer for Connecting Lines -->
+            <svg class="roadmap-svg" viewBox="0 0 1200 600" preserveAspectRatio="none">
                 <defs>
-                    <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="200%" y2="0%">
+                    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1">
                             <animate attributeName="offset" values="0%;100%;0%" dur="8s" repeatCount="indefinite" />
                         </stop>
@@ -94,7 +98,8 @@
                 <!-- CENTER HORIZONTAL LINE (evenly spaced) -->
 
                 <!-- Definitions & Lingo -->
-                <a href="pages/definitions.html" class="node node-definitions" style="left: 3%; top: 46%;">
+                <a id="node-definitions" href="pages/definitions.html" class="node node-definitions"
+                    style="left: 3%; top: 46%;">
                     <div class="node-content node-circle-large">
                         <span class="node-icon">📖</span>
                         <span class="node-label">Definitions & Lingo</span>
@@ -103,7 +108,8 @@
                 </a>
 
                 <!-- IDE Set-up -->
-                <a href="pages/ide-setup.html" class="node node-purple-center" style="left: 23%; top: 46%;">
+                <a id="node-ide-setup" href="pages/ide-setup.html" class="node node-purple-center"
+                    style="left: 23%; top: 46%;">
                     <div class="node-content node-circle-large">
                         <span class="node-icon"><img src="icons/ide-setup.png" alt="IDE Setup" class="icon-img"></span>
                         <span class="node-label">IDE Set-up</span>
@@ -112,16 +118,19 @@
                 </a>
 
                 <!-- Creating a Repository -->
-                <a href="pages/creating-repo.html" class="node node-main" style="left: 39%; top: 46%;">
+                <a id="node-create-repo" href="pages/creating-repo.html" class="node node-main"
+                    style="left: 39%; top: 46%;">
                     <div class="node-content node-circle-large">
-                        <span class="node-icon"><img src="icons/create-repo.png" alt="Create Repository" class="icon-img"></span>
+                        <span class="node-icon"><img src="icons/create-repo.png" alt="Create Repository"
+                                class="icon-img"></span>
                         <span class="node-label">Creating a Repository</span>
                     </div>
                     <div class="node-glow"></div>
                 </a>
 
                 <!-- Updating a Repository -->
-                <a href="pages/updating-repo.html" class="node node-red-center" style="left: 55%; top: 46%;">
+                <a id="node-update-repo" href="pages/updating-repo.html" class="node node-red-center"
+                    style="left: 55%; top: 46%;">
                     <div class="node-content node-circle-large">
                         <span class="node-icon">🔄</span>
                         <span class="node-label">Updating a Repository</span>
@@ -130,7 +139,8 @@
                 </a>
 
                 <!-- Templates & Open Source (Circle) -->
-                <a href="pages/templates-opensource.html" class="node node-workflow" style="left: 71%; top: 46%;">
+                <a id="node-templates" href="pages/templates-opensource.html" class="node node-workflow"
+                    style="left: 71%; top: 46%;">
                     <div class="node-content node-circle-large">
                         <span class="node-icon">🔀</span>
                         <span class="node-label">Templates & Open Source</span>
@@ -139,7 +149,8 @@
                 </a>
 
                 <!-- Exploration -->
-                <a href="pages/github-profile.html#customization" class="node node-optional" style="left: 87%; top: 46%;">
+                <a id="node-explore-right" href="pages/github-profile.html#customization" class="node node-optional"
+                    style="left: 87%; top: 46%;">
                     <div class="node-content node-circle-dashed">
                         <span class="node-icon"><img src="icons/gh-pages.png" alt="s" class="icon-img"></span>
                         <span class="node-label">Explore</span>
@@ -149,31 +160,38 @@
                 <!-- VERTICAL PAIRS (symmetric around center) -->
 
                 <!-- Pair 2: GitHub Desktop (above) & GitHub Profile (below) -->
-                <a href="pages/github-desktop.html" class="node node-pink" style="left: 13%; top: 17%;">
+                <a id="node-desktop" href="pages/github-desktop.html" class="node node-pink"
+                    style="left: 13%; top: 17%;">
                     <div class="node-content node-circle">
-                        <span class="node-icon"><img src="icons/desktop.png" alt="GitHub Desktop" class="icon-img"></span>
+                        <span class="node-icon"><img src="icons/desktop.png" alt="GitHub Desktop"
+                                class="icon-img"></span>
                         <span class="node-label">GitHub Desktop Set-up</span>
                     </div>
                     <div class="node-glow pink-glow"></div>
                 </a>
 
-                <a href="pages/github-profile.html" class="node node-pink" style="left: 13%; top: 75%;">
+                <a id="node-profile" href="pages/github-profile.html" class="node node-pink"
+                    style="left: 13%; top: 75%;">
                     <div class="node-content node-circle">
-                        <span class="node-icon"><img src="icons/profile.png" alt="GitHub Profile" class="icon-img"></span>
+                        <span class="node-icon"><img src="icons/profile.png" alt="GitHub Profile"
+                                class="icon-img"></span>
                         <span class="node-label">GitHub Profile Set-up</span>
                     </div>
                     <div class="node-glow pink-glow"></div>
                 </a>
 
                 <!-- Pair 3: Exploration (above) & VS Code Basics (below) aligned with IDE Setup -->
-                <a href="pages/ide-setup.html#ai" class="node node-optional" style="left: 23%; top: 17%; transform: translateX(7.5px);">
+                <a id="node-explore-top" href="pages/ide-setup.html#ai" class="node node-optional"
+                    style="left: 23%; top: 17%;">
                     <div class="node-content node-circle-dashed">
-                        <span class="node-icon"><img src="icons/customization.png" alt="Customization" class="icon-img"></span>
+                        <span class="node-icon"><img src="icons/customization.png" alt="Customization"
+                                class="icon-img"></span>
                         <span class="node-label">Explore</span>
                     </div>
                 </a>
 
-                <a href="pages/ide-setup.html#basics" class="node node-purple" style="left: 23%; top: 75%; transform: translateX(7.5px);">
+                <a id="node-vscode" href="pages/ide-setup.html#basics" class="node node-purple"
+                    style="left: 23%; top: 75%;">
                     <div class="node-content node-circle">
                         <span class="node-icon"><img src="icons/VSCode-logo.png" alt="VS Code" class="icon-img"></span>
                         <span class="node-label">VS Code Basics</span>
@@ -182,7 +200,8 @@
                 </a>
 
                 <!-- Pair 4: Remote (above) & Local (below) -->
-                <a href="pages/updating-repo.html#remote" class="node node-red" style="left: 55%; top: 17%; transform: translateX(7.5px);">
+                <a id="node-remote" href="pages/updating-repo.html#remote" class="node node-red"
+                    style="left: 55%; top: 17%;">
                     <div class="node-content node-circle">
                         <span class="node-icon"><img src="icons/remote.png" alt="Remote" class="icon-img"></span>
                         <span class="node-label">Remote (GitHub)</span>
@@ -190,7 +209,8 @@
                     <div class="node-glow red-glow"></div>
                 </a>
 
-                <a href="pages/updating-repo.html#local" class="node node-red" style="left: 55%; top: 75%; transform: translateX(7.5px);">
+                <a id="node-local" href="pages/updating-repo.html#local" class="node node-red"
+                    style="left: 55%; top: 75%;">
                     <div class="node-content node-circle">
                         <span class="node-icon">💾</span>
                         <span class="node-label">Local (Desktop)</span>
@@ -245,4 +265,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -128,7 +128,7 @@
 4. **`Public/Private:`** `Select visibility (public for this course).`  
 5. **`Initialize with:`**  
    * **`Add a README file:`** `Check this box.`  
-   * **`Add .gitignore:`** `Select a template (e.g., "Windows", "macOS", "Node", or "Python"). This prevents uploading hidden system files.`  
+   * **`Add .gitignore:`** `Select a template (e.g., "macOS", "Node", or "Python"). This prevents uploading hidden system files.`   
 6. `Click Create repository.`
 
 `✨ Try It Now: Create a "Sandbox" repository right now just to practice. You can delete it later!`
@@ -141,7 +141,9 @@
 
 1. `On your GitHub repo page, click the green Code button.`  
 2. **`For GitHub Desktop:`** `Click "Open with GitHub Desktop." Choose the local file path for the repository folder.`   
-3. **`For VS Code:`** `Copy the HTTPS URL. In VS Code, open the Command Palette, type "Git: Clone", paste the URL, and select a folder.`  
+3. **`For VS Code:`** `Two methods –`   
+   1. `Open a new window, click “Clone Git Repository”, and follow the prompts, OR`  
+   2. `Copy the HTTPS URL. In VS Code, open the Command Palette, type "Git: Clone", paste the URL, and select a folder.`  
 4. **`For GitHub Desktop -> VS Code:`** `follow the “Open with GitHub Desktop” prompts to create the local folder, then open this folder as a workspace in VS Code.` 
 
 **`Step B: The Edit Cycle`**
