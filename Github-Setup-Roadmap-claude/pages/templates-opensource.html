@@ -180,43 +180,35 @@
             </div>
         </section>
 
-        <!-- The Open Source Workflow Diagram -->
+        <!-- The Open Source Workflow -->
         <section class="content-section">
             <h2 class="section-title"><span class="icon">🔄</span> The Open Source Workflow</h2>
 
-            <div class="code-block" style="text-align: center; font-size: 0.9rem;">
-┌─────────────────────────────────────────────────────┐
-│           ORIGINAL REPOSITORY                        │
-│         (Someone else's project)                     │
-└──────────────────────┬──────────────────────────────┘
-                       │
-                   ↓ FORK ↓
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│              YOUR FORK                               │
-│        (Your copy on GitHub)                         │
-└──────────────────────┬──────────────────────────────┘
-                       │
-                  ↓ CLONE ↓
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│              YOUR COMPUTER                           │
-│            (Make your changes)                       │
-└──────────────────────┬──────────────────────────────┘
-                       │
-              ↑ PUSH TO YOUR FORK ↑
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│              YOUR FORK                               │
-│          (Now has your changes)                      │
-└──────────────────────┬──────────────────────────────┘
-                       │
-              ↓ PULL REQUEST ↓
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│           ORIGINAL REPOSITORY                        │
-│    (Owner reviews and may merge your changes!)       │
-└─────────────────────────────────────────────────────┘
+            <div class="definition-grid">
+                <div class="definition-card" style="border-left-color: var(--accent-pink);">
+                    <div class="definition-term">1. Fork</div>
+                    <div class="definition-text">Create your own copy of the original repository on GitHub</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-purple);">
+                    <div class="definition-term">2. Clone</div>
+                    <div class="definition-text">Download your fork to your local computer</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-cyan);">
+                    <div class="definition-term">3. Make Changes</div>
+                    <div class="definition-text">Edit files, add features, or fix bugs on your computer</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-blue);">
+                    <div class="definition-term">4. Push</div>
+                    <div class="definition-text">Upload your changes back to your fork on GitHub</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-orange);">
+                    <div class="definition-term">5. Pull Request</div>
+                    <div class="definition-text">Propose your changes to the original repository owner</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-green);">
+                    <div class="definition-term">6. Review & Merge</div>
+                    <div class="definition-text">The owner reviews and (hopefully!) merges your contribution</div>
+                </div>
             </div>
         </section>
 
@@ -233,6 +225,10 @@
                 GitHub Pages Deployment <span>→</span>
             </a>
         </nav>
+
+        <a href="../index.html" class="back-link" style="text-align: center; display: block; margin-top: var(--space-xl);">
+            <span>←</span> Back to Roadmap
+        </a>
     </main>
 
     <button class="scroll-top" aria-label="Scroll to top">↑</button>
