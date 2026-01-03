@@ -529,7 +529,7 @@ body {
 }
 
 .node-label {
-    font-family: var(--font-heading);
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
     font-weight: 500;
     max-width: 130px;
@@ -592,8 +592,8 @@ body {
 }
 
 .node-star-shape {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     clip-path: polygon(
         50% 0%,
         61% 35%,
@@ -624,19 +624,25 @@ body {
 .node-star-decorative {
     pointer-events: none;
     cursor: default;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-50%);
+    margin-left: 50%;
 }
 
 .node-star-decorative:hover {
-    transform: none !important;
+    transform: translateX(-50%) !important;
 }
 
 .node-star-decorative .node-content {
     padding: 0;
-    background: transparent;
-    border: none;
+    background: transparent !important;
+    border: none !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    height: 40px;
 }
 
 @keyframes rainbowShift {
@@ -854,7 +860,9 @@ body {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: var(--space-lg);
+    margin: 0 auto var(--space-lg) auto;
+    padding: 0;
+    width: 100%;
     color: var(--accent-purple);
 }
 
@@ -873,7 +881,23 @@ body {
     border-radius: var(--radius-lg);
     text-decoration: none;
     color: var(--text-primary);
-    border: 2px solid var(--text-muted);
+    border: 3px solid transparent;
+    background-image:
+        linear-gradient(rgba(10, 10, 20, 0.85), rgba(10, 10, 20, 0.85)),
+        linear-gradient(
+            90deg,
+            #ff3399 0%,
+            #ff9933 14%,
+            #ffdd00 28%,
+            #00d4ff 42%,
+            #5599ff 56%,
+            #aa66ff 70%,
+            #ff3399 100%
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100%, 200% 100%;
+    animation: rainbowBorder 8s linear infinite;
     transition: all var(--transition-normal);
 }
 
@@ -881,22 +905,6 @@ body {
 .mobile-nav-item:focus {
     transform: translateY(-4px);
     box-shadow: var(--shadow-glow);
-}
-
-.mobile-nav-item.pink {
-    border-color: var(--accent-pink);
-}
-
-.mobile-nav-item.purple {
-    border-color: var(--accent-purple);
-}
-
-.mobile-nav-item.red {
-    border-color: var(--accent-red);
-}
-
-.mobile-nav-item.deployment {
-    border-color: var(--accent-cyan);
 }
 
 .mobile-nav-item .nav-icon {
@@ -1451,22 +1459,7 @@ body {
     }
 }
 
-/* Staggered Animation */
-.stagger > * {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-.stagger > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger > *:nth-child(2) { animation-delay: 0.2s; }
-.stagger > *:nth-child(3) { animation-delay: 0.3s; }
-.stagger > *:nth-child(4) { animation-delay: 0.4s; }
-.stagger > *:nth-child(5) { animation-delay: 0.5s; }
-.stagger > *:nth-child(6) { animation-delay: 0.6s; }
-.stagger > *:nth-child(7) { animation-delay: 0.7s; }
-.stagger > *:nth-child(8) { animation-delay: 0.8s; }
-.stagger > *:nth-child(9) { animation-delay: 0.9s; }
-.stagger > *:nth-child(10) { animation-delay: 1s; }
+/* Staggered Animation - Removed to prevent flash on page load */
 
 /* Hover Lift */
 .hover-lift {
