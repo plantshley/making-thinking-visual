@@ -334,30 +334,34 @@ function drawConnection(fromId, toId, svg) {
     // --- COORDINATE MAPPING (Simple Stretch) ---
     // With preserveAspectRatio="none", the SVG stretches to fill the container.
     // We just map percentage of width/height.
+    // --- COORDINATE MAPPING (Visual Center Based) ---
+    // We map the actual visual center of the node to the SVG coordinate system.
+    // This ensures lines connect to where the nodes ARE, not where CSS thinks they should be.
+
     const svgRect = svg.getBoundingClientRect();
     const viewBox = { w: 1200, h: 600 };
 
+    // Calculate simple scale factors since preserveAspectRatio="none"
     const scaleX = viewBox.w / svgRect.width;
     const scaleY = viewBox.h / svgRect.height;
 
-    function getSVGCoordinates(elem) {
+    function getVisualCenter(elem) {
         const rect = elem.getBoundingClientRect();
-        // Screen Center
-        const screenX = rect.left + rect.width / 2;
-        const screenY = rect.top + rect.height / 2;
+        // Calculate Visual Center
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
 
-        // Relative to SVG Frame
-        const relX = screenX - svgRect.left;
-        const relY = screenY - svgRect.top;
-
+        // Map to SVG ViewBox
+        // 1. Shift by SVG position (relative to viewport)
+        // 2. Scale to ViewBox units
         return {
-            x: relX * scaleX,
-            y: relY * scaleY
+            x: (centerX - svgRect.left) * scaleX,
+            y: (centerY - svgRect.top) * scaleY
         };
     }
 
-    const startPt = getSVGCoordinates(fromNode);
-    const endPt = getSVGCoordinates(toNode);
+    const startPt = getVisualCenter(fromNode);
+    const endPt = getVisualCenter(toNode);
 
     // --- RADIUS CALCULATION (Shape Aware) ---
     function getNodeRadius(node) {
@@ -426,21 +430,50 @@ function initCollapsibles() {
 function initTabs() {
     const tabContainers = document.querySelectorAll('.tabs');
 
-    tabContainers.forEach(container => {
+    console.log('Tab containers found:', tabContainers.length);
+
+    tabContainers.forEach((container, index) => {
         const buttons = container.querySelectorAll('.tab-btn');
         const contents = container.querySelectorAll('.tab-content');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const target = button.getAttribute('data-tab');
+        console.log(`Container ${index}: ${buttons.length} buttons, ${contents.length} contents`);
 
-                // Remove active class from all
-                buttons.forEach(btn => btn.classList.remove('active'));
-                contents.forEach(content => content.classList.remove('active'));
+        buttons.forEach((button, btnIndex) => {
+            console.log(`Adding listener to button ${btnIndex}`);
 
-                // Add active class to clicked
-                button.classList.add('active');
-                container.querySelector(`#${target}`)?.classList.add('active');
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const targetId = this.getAttribute('data-tab');
+                console.log('Button clicked! Target:', targetId);
+
+                if (!targetId) {
+                    console.error('No data-tab attribute found');
+                    return;
+                }
+
+                // Remove active from all buttons in this container
+                container.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Remove active from all contents in this container
+                container.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Add active to clicked button
+                this.classList.add('active');
+
+                // Find and activate target content
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                    console.log('Activated content:', targetId);
+                } else {
+                    console.error('Target content not found:', targetId);
+                }
             });
         });
     });

@@ -242,30 +242,38 @@
         <section class="content-section">
             <h2 class="section-title"><span class="icon">🗺️</span> The Complete Workflow</h2>
 
-            <div class="code-block" style="text-align: center; font-size: 1.1rem;">
-┌─────────────────────────────────────────────────────┐
-│                    GITHUB.COM                        │
-│                   (Remote Repo)                      │
-└──────────────────────┬──────────────────────────────┘
-                       │
-                  ↓ CLONE ↓
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│                YOUR COMPUTER                         │
-│                  (Local Repo)                        │
-│                                                      │
-│    ┌─────────┐    ┌─────────┐    ┌─────────┐       │
-│    │  EDIT   │ →  │  STAGE  │ →  │ COMMIT  │       │
-│    └─────────┘    └─────────┘    └─────────┘       │
-│                                                      │
-└──────────────────────┬──────────────────────────────┘
-                       │
-                   ↑ PUSH ↑
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│                    GITHUB.COM                        │
-│              (Updated Remote Repo!)                  │
-└─────────────────────────────────────────────────────┘
+            <div class="definition-grid">
+                <div class="definition-card" style="border-left-color: var(--accent-cyan);">
+                    <div class="definition-term">1. Clone</div>
+                    <div class="definition-text">Download the repo from GitHub.com to your computer</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-green);">
+                    <div class="definition-term">2. Edit</div>
+                    <div class="definition-text">Make changes to your files locally</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-blue);">
+                    <div class="definition-term">3. Stage</div>
+                    <div class="definition-text">Select which changes you want to save</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-purple);">
+                    <div class="definition-term">4. Commit</div>
+                    <div class="definition-text">Save the changes with a message</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-pink);">
+                    <div class="definition-term">5. Push</div>
+                    <div class="definition-text">Upload your commits back to GitHub.com</div>
+                </div>
+                <div class="definition-card" style="border-left-color: var(--accent-orange);">
+                    <div class="definition-term">✨ Done!</div>
+                    <div class="definition-text">Your changes are now live on GitHub</div>
+                </div>
+            </div>
+
+            <div class="callout tip" style="margin-top: var(--space-lg);">
+                <span class="callout-icon">💡</span>
+                <div class="callout-content">
+                    <strong>Remember:</strong> You only Clone once, but you'll Edit → Stage → Commit → Push many times as you work on your project!
+                </div>
             </div>
         </section>
 
