@@ -278,6 +278,9 @@ document.head.appendChild(sparkleStyle);
 function initLineAnimations() {
     const svg = document.querySelector('.roadmap-svg');
 
+    // Return early if no SVG exists (e.g., on detail pages)
+    if (!svg) return;
+
     // Clear existing lines if any (except defs)
     const existingPath = svg.querySelectorAll('path');
     existingPath.forEach(p => p.remove());
@@ -285,8 +288,6 @@ function initLineAnimations() {
     const connections = [
         // --- LEFT (Desktop/Profile Wedge) ---
         { from: 'node-desktop', to: 'node-profile' },      // Vertical connection
-        { from: 'node-desktop', to: 'node-ide-setup' },    // Diagonal to IDE
-        { from: 'node-profile', to: 'node-ide-setup' },    // Diagonal to IDE
         { from: 'node-definitions', to: 'node-ide-setup' }, // Horizontal Spine
 
         // --- CENTER (IDE & VS Code) ---
@@ -441,7 +442,7 @@ function initTabs() {
         buttons.forEach((button, btnIndex) => {
             console.log(`Adding listener to button ${btnIndex}`);
 
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 
