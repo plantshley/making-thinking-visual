@@ -41,7 +41,7 @@
         </a>
 
         <header class="page-header">
-            <h1 class="page-title">👤 GitHub Profile Set-up</h1>
+            <h1 class="page-title">GitHub Profile Set-up</h1>
             <p class="page-subtitle">Create your presence in the developer universe</p>
         </header>
 
@@ -105,7 +105,7 @@
             <div class="callout info">
                 <span class="callout-icon">🌟</span>
                 <div class="callout-content">
-                    This creates a unique content section on your main profile page. It's like having a personal billboard on GitHub!
+                    This creates a unique content section on your main profile page. It's like having a personal billboard on <a href="https://github.com" target="_blank" rel="noopener" class="content-link">GitHub</a>!
                 </div>
             </div>
 
@@ -122,7 +122,7 @@
                 <h3 class="step-title">The Crucial Step!</h3>
                 <div class="step-content">
                     <p><strong>Name the repository exactly the same as your GitHub username.</strong></p>
-                    <p>For example: If your username is <code>JaneDoe</code>, the repo name must be <code>JaneDoe</code>.</p>
+                    <p>For example: If your username is <code><twinkle-fairy></twinkle-fairy></code>, the repo name must be <code>JaneDoe</code>.</p>
                     <div class="callout warning">
                         <span class="callout-icon">⚠️</span>
                         <div class="callout-content">
@@ -163,20 +163,44 @@
                     <p>Use Markdown to add text:</p>
                     <ul>
                         <li><strong>Headings:</strong> Use <code>#</code> for large text</li>
-                        <li><strong>Images:</strong> Use the format <code>![Alt Text](url-to-image)</code></li>
+                        <li><strong>Images:</strong> Use the format <code>&lt;img src="image.png" alt="description" width="size"&gt;</code></li>
                         <li><strong>Links:</strong> Use <code>[Link Text](URL)</code></li>
                     </ul>
-                    <div class="code-block">
-# Hi there! 👋 I'm Jane
+                    <div class="markdown-example-container">
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="markdown-raw-view">Raw Markdown</button>
+                                <button class="tab-btn" data-tab="markdown-rendered-view">Rendered Result</button>
+                            </div>
+
+                            <div class="tab-content active" id="markdown-raw-view">
+                                <pre><code># Hi there! 🌈🌷 I'm fairy ✨&lt;img src="icons/cutie wizard star1.png" alt="cutie wizard" width="80"&gt;
 
 🎓 Engineering Student at Colorado State University
-🚀 Learning GitHub and version control
-💡 Passionate about building cool things
+🚀 Learning [GitHub](https://github.com) and version control
+💡 Passionate about sustainability & building cool things
 
 ## My Interests
-- 🌐 Web Development
-- 🤖 Machine Learning
-- 🎮 Game Design
+- 🌈 Visual Art
+- 🌏 AI World Models
+- 💪 Powerlifting</code></pre>
+                            </div>
+
+                            <div class="tab-content" id="markdown-rendered-view">
+                                <div class="markdown-preview">
+                                    <h1>Hi there! 🌈🌷 I'm fairy ✨<img src="../icons/cutie wizard star1.png" alt="wizard" width="80" style="vertical-align: middle; margin-left: 0rem;"></h1>
+                                    <p>🎓 Engineering Student at Colorado State University<br>
+                                    🚀 Learning <a href="https://github.com" target="_blank" rel="noopener" class="content-link">GitHub</a> and version control<br>
+                                    💡 Passionate about sustainability & building cool things</p>
+                                    <h2>My Interests</h2>
+                                    <ul>
+                                        <li>🌈 Visual Art</li>
+                                        <li>🌏 AI World Models</li>
+                                        <li>💪 Powerlifting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,8 +223,8 @@
             <a href="definitions.html" class="nav-btn prev">
                 <span>←</span> Definitions & Lingo
             </a>
-            <a href="ide-setup.html" class="nav-btn next">
-                IDE Set-up <span>→</span>
+            <a href="github-desktop.html" class="nav-btn next">
+                GitHub Desktop Set-up<span>→</span>
             </a>
         </nav>
 
