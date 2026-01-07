@@ -1,12 +1,12 @@
 # Making Thinking Visible 🌈🌟💭
 
-Welcome to the **Making Thinking Visible** resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments.
+Welcome to the **Making Thinking Visible** resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments. After making your GitHub profile, star or watch this page! 
 
 ## Course Philosophy
 
 This course focuses on building mental models to represent complex engineering concepts.
 
-* **Effort over Perfection:** You are graded on your process and attempt, not on creating a flawless masterpiece.
+* **Experimentation & Effort over Perfection:** You are graded on your process and attempt, not on creating a flawless masterpiece.
 * **Exploration:** Use this time to explore new tools and find what works for your thinking style.
 * **No "Failing":** There is no wrong way to visualize your thoughts, provided you are engaging with the material.
 
@@ -42,8 +42,8 @@ Detailed instructions on how to submit your assignments. You can choose from fou
 3. **Tier 3:** Incorporate into Webpage Template
 4. **Tier 4:** Freeform / Custom Code
 
-* 📄 **[Read the Full Instructions & Requirements](https://drive.google.com/file/d/1QR7uv3OnCuAKaEIhYpyudHm5CW0yL3Av/view?usp=sharing)**
-* 🔗 **[Link to Tier 3 Template Repository]**
+* 📄 **[Read the Full Instructions & Requirements](https://drive.google.com/file/d/1UHRmrcVib2rJk6sDKv8OHy0ZrwR848lE/view?usp=sharing)**
+* 🔗 **[Tier 3 Template Repository](https://github.com/plantshley/tier-3-template.git)**
 
 ## Final Project & Student Gallery
 
@@ -51,7 +51,7 @@ For the final project, after going on the *[Universe of Tools Persona Quest](htt
 
 * **Requirement:** You must submit a Pull Request (PR) to the gallery repository.
 * 🔗 **[Go on the quest](https://plantshley.github.io/web-tools-persona-quest/)**
-* 🔗 Visit the **Student Gallery Repository** for detailed instructions
+* 🔗 Visit the **[Student Gallery Repository](https://github.com/plantshley/student-model-gallery.git)** for detailed instructions
 
 ## Need Help?
 
