@@ -42,8 +42,8 @@ Detailed instructions on how to submit your assignments. You can choose from fou
 3. **Tier 3:** Incorporate into Webpage Template
 4. **Tier 4:** Freeform / Custom Code
 
-* 📄 **[Read the Full Instructions & Requirements]**
-* 🔗 **[Link to Webpage Template Repository]**
+* 📄 **[Read the Full Instructions & Requirements](https://drive.google.com/file/d/1QR7uv3OnCuAKaEIhYpyudHm5CW0yL3Av/view?usp=sharing)**
+* 🔗 **[Link to Tier 3 Template Repository]**
 
 ## Final Project & Student Gallery
 
