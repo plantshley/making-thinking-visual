@@ -1,2 +1,59 @@
-# making-thinking-visual
-repo for 
+# **`Making Thinking Visible`**
+
+`Welcome to the Making Thinking Visible resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments.`
+
+## **`Course Philosophy`**
+
+`This course focuses on building mental models to represent complex engineering concepts.`
+
+* **`Effort over Perfection:`** `You are graded on your process and attempt, not on creating a flawless masterpiece.`  
+* **`Exploration:`** `Use this time to explore new tools and find what works for your thinking style.`  
+* **`No "Failing":`** `There is no wrong way to visualize your thoughts, provided you are engaging with the material.`
+
+## **`Repository Contents`**
+
+### **`1. Setting Up GitHub Resources`**
+
+`Everything you need to configure your GitHub profile and development environment.`
+
+* **`🔗Visual “Starmap”`**`: An interactive webpage guide to the setup process, covering Account Creation, VS Code Installation, and creating your first repo.`  
+* **`📄Setting Up GitHub Instructional Guide`**`: A sequential, detailed document version of the above for those who prefer simple lists.`
+
+### **`2. Visualization Tool Resources`**
+
+`Resources and templates for the tools used in the first three quarters of the semester.`
+
+* **`Tool 1: Creative Visualization (Canva)`**  
+  * `Best for: Flexible visual modalities, infographics, and creative freedom.`  
+  * `[View Resources & Templates]`  
+* **`Tool 2: Diagramming & Whiteboarding`**  
+  * `Best for: Straightforward logic flows, system diagrams, and brainstorming.`  
+  * `[View Resources & Templates]`
+
+### **`3. Mental Model Assignment Options & Instructions`**
+
+`Detailed instructions on how to submit your assignments. You can choose from four "Tiers" of technical complexity for any assignment:`
+
+1. **`Tier 1:`** `Simple Manual Upload`  
+2. **`Tier 2:`** `Simple Push to Remote`  
+3. **`Tier 3:`** `Incorporate into Webpage Template`  
+4. **`Tier 4:`** `Freeform / Custom Code`  
+* `📄 [Read the Full Instructions & Requirements]`  
+* `🔗 [Link to Webpage Template Repository]`
+
+## **`Final Project & Student Gallery`** 
+
+`For the final project, after going on the Universe of Tools Persona Quest, you will have complete freedom to choose your tool and method. All final projects will be collected in the class Student Gallery.`
+
+* **`Requirement:`** `You must submit a Pull Request (PR) to the gallery repository.`  
+* `🔗 Go on the quest`  
+* `🔗 Visit the Student Gallery Repository for detailed instructions`
+
+## **`Need Help?`**
+
+`If you are stuck on a Git command or a tool feature:`
+
+1. `Check the Setting Up GitHub Resources in this repo.`  
+2. `Visit the official VS Code Documentation or GitHub Docs.`  
+3. `Reach out to the teaching team via Canvas.`
+
