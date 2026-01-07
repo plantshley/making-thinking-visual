@@ -21,14 +21,17 @@ Everything you need to configure your GitHub profile and development environment
 
 ### 2. Visualization Tool Resources
 
-Resources and templates for the tools used in the first three quarters of the semester.
+Resources for the two tool options you can choose from for the mental model assignments in the first three quarters of the semester.
 
-* **Tool 1: Creative Visualization (Canva)**
-  * Best for: Flexible visual modalities, infographics, and creative freedom.
-  * [View Resources & Templates]
-* **Tool 2: Diagramming & Whiteboarding**
+* **Tool 1: Creative Visualization ([Canva](https://www.canva.com/))**
+  * Best for: Flexible visual modalities (including graphics, coding, slides, videos, etc), infographics, and creative freedom.
+  * [Getting Started in Canva](https://www.canva.com/learn/how-to-canva-beginners-guide/)
+  * View additional resources, examples, and recommendations in the *Tool Resources - Canva* folder
+* **Tool 2: Diagramming & Whiteboarding ([Miro](https://miro.com/))**
   * Best for: Straightforward logic flows, system diagrams, and brainstorming.
-  * [View Resources & Templates]
+  * [Getting Started in Miro](https://miro.com/how-to-use-miro/#getting-started-in-miro) 
+  * Join the class team on Miro - [Making Thinking Visual](https://miro.com/welcome/bkJIU3M0c01DbWJ1WEJBb1NaTFVhdUE1VWh6OTArNWtiS2lJUlo1TWwrNEJoVWw1bnNFMXc5eGhPYjR6cXg3aHJESDBOaW0rdCtJV2IzQkRna0dvZ1lWT0lTbkRFZjg1UWtkY3QzYWRrd3cvOGU0bmZqZEN3bVJlWk52MWV1dGhyVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=536258432912)
+  * View additional resources, examples, and recommendations in the *Tool Resources - Miro* folder
 
 ### 3. Mental Model Assignment Options & Instructions
 
