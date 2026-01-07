@@ -1,4 +1,4 @@
-# Making Thinking Visible
+# Making Thinking Visible 🌈🌟💭
 
 Welcome to the **Making Thinking Visible** resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments.
 
