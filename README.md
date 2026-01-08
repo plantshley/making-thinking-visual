@@ -7,7 +7,7 @@ Welcome to the **Making Thinking Visible** resource hub. This repository serves 
 This course focuses on building mental models to represent complex engineering concepts.
 
 * **Experimentation & Effort over Perfection:** You are assessed on your process and attempt, not on creating a flawless masterpiece.
-* **Exploration:** Use this time to explore new tools (including AI help if desired) and find what works for your thinking style.
+* **Exploration:** Use this time to explore new tools (including AI help if desired), have *FUN*, and find what works for your thinking style.
 * **No "Failing":** There is no wrong way to visualize your thoughts and mental models, provided you are engaging with the material.
 
 ## Repository Contents
