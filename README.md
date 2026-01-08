@@ -35,7 +35,7 @@ Resources for the two tool options you can choose from for the mental model assi
 
 ### 3. Mental Model Assignment Options & Instructions
 
-Detailed instructions on how to submit your assignments. You can choose from four "Tiers" of technical complexity for any assignment. You will NOT be penalized for choosing a "lower" tier! We want to honor all levels of comfortability and student time constraints ( ᴗ͈ˬᴗ͈)ꕤ*.ﾟ
+Detailed instructions on how to submit your assignments. You can choose from four "Tiers" of technical complexity for any assignment. You will *NOT* be penalized for choosing a "lower" tier. We want to honor all levels of comfortability and student time constraints!
 
 1. **Tier 1:** Simple Manual Upload
 2. **Tier 2:** Simple Push to Remote
