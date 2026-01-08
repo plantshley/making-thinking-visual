@@ -1,14 +1,14 @@
 # Making Thinking Visible 🌈🌟💭
 
-Welcome to the **Making Thinking Visible** resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments. After making your GitHub profile, star or watch this page! 
+Welcome to the **Making Thinking Visible** resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments. After making your GitHub profile, star and watch this page! 
 
 ## Course Philosophy
 
 This course focuses on building mental models to represent complex engineering concepts.
 
-* **Experimentation & Effort over Perfection:** You are graded on your process and attempt, not on creating a flawless masterpiece.
-* **Exploration:** Use this time to explore new tools and find what works for your thinking style.
-* **No "Failing":** There is no wrong way to visualize your thoughts, provided you are engaging with the material.
+* **Experimentation & Effort over Perfection:** You are assessed on your process and attempt, not on creating a flawless masterpiece.
+* **Exploration:** Use this time to explore new tools (including AI help if desired) and find what works for your thinking style.
+* **No "Failing":** There is no wrong way to visualize your thoughts and mental models, provided you are engaging with the material.
 
 ## Repository Contents
 
@@ -35,7 +35,7 @@ Resources for the two tool options you can choose from for the mental model assi
 
 ### 3. Mental Model Assignment Options & Instructions
 
-Detailed instructions on how to submit your assignments. You can choose from four "Tiers" of technical complexity for any assignment:
+Detailed instructions on how to submit your assignments. You can choose from four "Tiers" of technical complexity for any assignment. You will NOT be penalized for choosing a "lower" tier! We want to honor all levels of comfortability and student time constraints ( ᴗ͈ˬᴗ͈)ꕤ*.ﾟ
 
 1. **Tier 1:** Simple Manual Upload
 2. **Tier 2:** Simple Push to Remote
