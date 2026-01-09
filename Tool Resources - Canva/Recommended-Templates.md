@@ -2,7 +2,7 @@
 
 These templates serve as **starting points and inspiration** for the visual structure you might use to represent your mental model. Focus on the *structure and layout*, not the specific content or instructions shown in each template. You should adapt, mix, or completely reimagine any template to fit your thinking style!
 
-To use, simply click the template name to open it in Canva and customize!
+To use, simply click the template to open it in Canva and customize!
 
 ---
 
