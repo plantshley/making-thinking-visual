@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Analytics 4 Reference Guide - GitHub Setup Starmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4a4a4a;
+            background: linear-gradient(135deg, #ffd1dc 0%, #e0b0ff 50%, #ffc8dd 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #fff5f7 0%, #fef6fb 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 182, 243, 0.5);
+        }
+
+        header {
+            background: linear-gradient(135deg, #ffb6f0 0%, #d4a5ff 50%, #ffccf9 100%);
+            color: #663366;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #c084fc;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f9a8d4;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #d946ef;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        h4 {
+            color: #a855f7;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .event-section {
+            background: linear-gradient(135deg, #fef3f9 0%, #fdf4ff 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #f9a8d4;
+        }
+
+        .parameter-list {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 10px 0;
+            border: 1px solid rgba(249, 168, 212, 0.2);
+        }
+
+        .parameter-item {
+            display: flex;
+            align-items: baseline;
+            margin: 8px 0;
+            padding: 10px;
+            background: linear-gradient(135deg, #fef9fc 0%, #fdf6ff 100%);
+            border-radius: 8px;
+            border: 1px solid rgba(232, 121, 249, 0.15);
+        }
+
+        .parameter-name {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #e879f9 0%, #d8b4fe 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-right: 10px;
+            font-weight: bold;
+            min-width: 250px;
+        }
+
+        .parameter-desc {
+            color: #555;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .high-priority {
+            background: linear-gradient(135deg, #fda4af 0%, #fb7185 100%);
+            color: white;
+        }
+
+        .medium-priority {
+            background: linear-gradient(135deg, #ffc4df 0%, #f1a8ff 100%);
+            color: #ffffff;
+        }
+
+        .low-priority {
+            background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 100%);
+            color: white;
+        }
+
+        .query-box {
+            background: linear-gradient(135deg, #fff0f9 0%, #fef3fb 100%);
+            color: #7c3668;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            border: 2px solid #f9a8d4;
+        }
+
+        .query-title {
+            color: #c084fc;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .query-details {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe9e0 100%);
+            border-left: 5px solid #ffb89d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .tip-box strong {
+            color: #b45309;
+        }
+
+        ol, ul {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .section-nav {
+            background: linear-gradient(135deg, #ffe9f5 0%, #f8e9ff 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #f9a8d4;
+        }
+
+        .section-nav a {
+            color: #c084fc;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .section-nav a:hover {
+            color: #d946ef;
+            text-decoration: underline;
+        }
+
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #ffd1f7 0%, #e8c5ff 100%);
+            color: #d946ef;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✦ Google Analytics 4 Reference Guide ✦</h1>
+            <p>GitHub Setup Starmap - Custom Event Tracking & Analytics Queries</p>
+        </header>
+
+        <div class="content">
+            <div class="section-nav">
+                <strong>Quick Navigation:</strong><br><br>
+                <a href="#sample-queries">Sample Queries</a>
+                <a href="#parameters-by-event">Parameters by Event</a>
+                <a href="#all-parameters">All Parameters</a>
+                <a href="#priority-list">Priority List</a>
+                <a href="#setup">How to Register Dimensions</a>
+            </div>
+
+            <!-- SAMPLE QUERIES SECTION -->
+            <h2 id="sample-queries"><span class="emoji">🔍</span>Sample Queries You Can Run</h2>
+            <p>Once you have data in Google Analytics, try these queries in <strong>Explore</strong> mode:</p>
+
+            <div class="query-box">
+                <div class="query-title">🗺️ "Which roadmap node is most popular?"</div>
+                <div class="query-details">
+                    <strong>Dimension:</strong> node_name, navigation_type<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = node_clicked<br>
+                    <strong>Result:</strong> Shows which topics students visit most
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">🌙 "Do users prefer dark or light theme?"</div>
+                <div class="query-details">
+                    <strong>Dimension:</strong> theme_selected<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = theme_changed<br>
+                    <strong>Visualization:</strong> Pie chart
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">📱 "Desktop roadmap vs mobile navigation usage"</div>
+                <div class="query-details">
+                    <strong>Dimension:</strong> navigation_type<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = node_clicked<br>
+                    <strong>Result:</strong> Compare desktop vs mobile navigation patterns
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">📑 "Which tab method do users prefer?"</div>
+                <div class="query-details">
+                    <strong>Dimensions:</strong> tab_group, tab_name<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = tab_clicked<br>
+                    <strong>Example Result:</strong> "GitHub Desktop" vs "VS Code" workflow preference
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">📄 "Which detail pages are most visited?"</div>
+                <div class="query-details">
+                    <strong>Dimension:</strong> page_name<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = page_view<br>
+                    <strong>Exclude:</strong> page_name = "GitHub Setup Starmap Hub"
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">♿ "Do users enable accessible fonts?"</div>
+                <div class="query-details">
+                    <strong>Dimension:</strong> accessible_fonts_enabled<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = font_accessibility_toggled<br>
+                    <strong>Result:</strong> Usage of OpenDyslexic font feature
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">🔗 "Which external resources get clicked most?"</div>
+                <div class="query-details">
+                    <strong>Dimensions:</strong> link_platform, link_label<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = external_link_clicked<br>
+                    <strong>Result:</strong> Shows clicks to GitHub, VS Code, GitHub Desktop, etc.
+                </div>
+            </div>
+
+            <div class="query-box">
+                <div class="query-title">↩️ "From which pages do users return to map?"</div>
+                <div class="query-details">
+                    <strong>Dimension:</strong> source_page<br>
+                    <strong>Metrics:</strong> Event count<br>
+                    <strong>Filter:</strong> Event name = back_to_map_clicked<br>
+                    <strong>Result:</strong> Which pages lead users back to the hub
+                </div>
+            </div>
+
+            <!-- PARAMETERS BY EVENT TYPE -->
+            <h2 id="parameters-by-event"><span class="emoji">📊</span>Parameters by Event Type</h2>
+
+            <div class="event-section">
+                <h3><span class="emoji">📄</span>page_view</h3>
+                <p>Tracks all page visits (hub + 8 detail pages)</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">page_name</span>
+                        <span class="parameter-desc">Title of the page visited (e.g., "Creating a Repository", "GitHub Setup Starmap Hub")</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">page_location</span>
+                        <span class="parameter-desc">Full URL of the page</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">page_path</span>
+                        <span class="parameter-desc">Path portion of the URL (e.g., "/pages/creating-repo.html")</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-section">
+                <h3><span class="emoji">🗺️</span>node_clicked</h3>
+                <p>Tracks clicks on roadmap nodes (both desktop SVG and mobile grid)</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">node_name</span>
+                        <span class="parameter-desc">Name of the clicked node (e.g., "GitHub Desktop", "Creating a Repository")</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">navigation_type</span>
+                        <span class="parameter-desc">Either "desktop" (SVG roadmap) or "mobile" (grid navigation)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-section">
+                <h3><span class="emoji">🌙</span>theme_changed</h3>
+                <p>Tracks theme toggle between dark and light modes</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">theme_selected</span>
+                        <span class="parameter-desc">The new theme chosen: "dark" or "light"</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">previous_theme</span>
+                        <span class="parameter-desc">The theme that was active before the change</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-section">
+                <h3><span class="emoji">♿</span>font_accessibility_toggled</h3>
+                <p>Tracks when users enable/disable accessible fonts (OpenDyslexic)</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">accessible_fonts_enabled</span>
+                        <span class="parameter-desc">Boolean: true (enabled) or false (disabled)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-section">
+                <h3><span class="emoji">📑</span>tab_clicked</h3>
+                <p>Tracks tab navigation in multi-option pages (workflow choices, methods, etc.)</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">tab_group</span>
+                        <span class="parameter-desc">Section or page ID where the tab exists (e.g., "remote", "local", "customization")</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">tab_name</span>
+                        <span class="parameter-desc">Name of the clicked tab (e.g., "GitHub Desktop", "VS Code", "Desktop → VS Code")</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-section">
+                <h3><span class="emoji">🔗</span>external_link_clicked</h3>
+                <p>Tracks clicks on external resource links (GitHub.com, VS Code, etc.)</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">link_platform</span>
+                        <span class="parameter-desc">Platform category: "github", "vscode", "github-desktop", "anthropic", or "external"</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">link_url</span>
+                        <span class="parameter-desc">Full URL of the clicked link</span>
+                    </div>
+                    <div class="parameter-item">
+                        <span class="parameter-name">link_label</span>
+                        <span class="parameter-desc">Text displayed for the link</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-section">
+                <h3><span class="emoji">↩️</span>back_to_map_clicked</h3>
+                <p>Tracks when users click "Back to Map" links to return to the hub</p>
+                <div class="parameter-list">
+                    <div class="parameter-item">
+                        <span class="parameter-name">source_page</span>
+                        <span class="parameter-desc">The page they're leaving to return to map (e.g., "Creating a Repository")</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALL PARAMETERS ALPHABETICALLY -->
+            <h2 id="all-parameters"><span class="emoji">📚</span>All Unique Parameters (Alphabetical)</h2>
+            <p>Here are all 14 custom parameters used across all events:</p>
+
+            <div class="parameter-list">
+                <div class="parameter-item">
+                    <span class="parameter-name">accessible_fonts_enabled</span>
+                    <span class="parameter-desc">Boolean indicating if OpenDyslexic font is active (font_accessibility_toggled)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">link_label</span>
+                    <span class="parameter-desc">Display text of external link clicked (external_link_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">link_platform</span>
+                    <span class="parameter-desc">Category of external link: github, vscode, github-desktop, anthropic, external (external_link_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">link_url</span>
+                    <span class="parameter-desc">Full URL of external link (external_link_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">navigation_type</span>
+                    <span class="parameter-desc">How user navigated: "desktop" (SVG) or "mobile" (grid) (node_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">node_name</span>
+                    <span class="parameter-desc">Name of roadmap node clicked (node_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">page_location</span>
+                    <span class="parameter-desc">Full URL of page view (page_view)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">page_name</span>
+                    <span class="parameter-desc">Title of page visited (page_view)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">page_path</span>
+                    <span class="parameter-desc">URL path of page (page_view)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">previous_theme</span>
+                    <span class="parameter-desc">Theme before change: "dark" or "light" (theme_changed)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">source_page</span>
+                    <span class="parameter-desc">Page user is leaving to return to hub (back_to_map_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">tab_group</span>
+                    <span class="parameter-desc">Section ID containing the tab (tab_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">tab_name</span>
+                    <span class="parameter-desc">Name of tab clicked (tab_clicked)</span>
+                </div>
+                <div class="parameter-item">
+                    <span class="parameter-name">theme_selected</span>
+                    <span class="parameter-desc">New theme chosen: "dark" or "light" (theme_changed)</span>
+                </div>
+            </div>
+
+            <!-- PRIORITY LIST -->
+            <h2 id="priority-list"><span class="emoji">⭐</span>Custom Dimension Priority List</h2>
+            <p>When registering custom dimensions in GA4, prioritize based on analytical value:</p>
+
+            <h3>High Priority <span class="priority-badge high-priority">Register First</span></h3>
+            <ul>
+                <li><strong>node_name</strong> - Core navigation tracking</li>
+                <li><strong>page_name</strong> - Essential for page analytics</li>
+                <li><strong>navigation_type</strong> - Desktop vs mobile usage patterns</li>
+                <li><strong>tab_name</strong> - Workflow preference insights</li>
+                <li><strong>tab_group</strong> - Contextual workflow analysis</li>
+                <li><strong>theme_selected</strong> - User preference data</li>
+            </ul>
+
+            <h3>Medium Priority <span class="priority-badge medium-priority">Register Second</span></h3>
+            <ul>
+                <li><strong>accessible_fonts_enabled</strong> - Accessibility usage metrics</li>
+                <li><strong>link_platform</strong> - External resource engagement</li>
+                <li><strong>source_page</strong> - Navigation flow patterns</li>
+                <li><strong>previous_theme</strong> - Theme switching behavior</li>
+            </ul>
+
+            <h3>Low Priority <span class="priority-badge low-priority">Optional</span></h3>
+            <ul>
+                <li><strong>link_url</strong> - Detailed link tracking (use link_platform instead for most analyses)</li>
+                <li><strong>link_label</strong> - Link text details</li>
+                <li><strong>page_path</strong> - Redundant with page_name</li>
+                <li><strong>page_location</strong> - Full URL (usually unnecessary)</li>
+            </ul>
+
+            <!-- HOW TO REGISTER -->
+            <h2 id="setup"><span class="emoji">⚙️</span>How to Register Custom Dimensions in GA4</h2>
+
+            <div class="tip-box">
+                <strong>Important:</strong> Custom dimensions must be registered in GA4 before they'll appear in reports. You have a limit of 50 event-scoped custom dimensions per property.
+            </div>
+
+            <h3>Step-by-Step Process:</h3>
+            <ol>
+                <li>Go to <strong>Admin</strong> (gear icon in bottom left)</li>
+                <li>Under the <strong>Property</strong> column, click <strong>Custom definitions</strong></li>
+                <li>Click <strong>Create custom dimension</strong></li>
+                <li>Fill in the form:
+                    <ul>
+                        <li><strong>Dimension name:</strong> Human-readable name (e.g., "Node Name")</li>
+                        <li><strong>Scope:</strong> Select <strong>Event</strong></li>
+                        <li><strong>Event parameter:</strong> Exact parameter name from code (e.g., "node_name")</li>
+                        <li><strong>Description:</strong> Optional note about what it tracks</li>
+                    </ul>
+                </li>
+                <li>Click <strong>Save</strong></li>
+                <li>Repeat for each parameter you want to analyze</li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>Pro Tip:</strong> Start with the High Priority dimensions listed above. You can always add more later as needed!
+            </div>
+
+            <!-- IMPLEMENTATION DETAILS -->
+            <h2><span class="emoji">🔧</span>Implementation Details</h2>
+
+            <h3>Files Modified:</h3>
+            <ul>
+                <li><strong>analytics.js</strong> (NEW) - Tracking utility functions</li>
+                <li><strong>script.js</strong> - Added 9 tracking insertion points</li>
+                <li><strong>index.html</strong> - Added GA4 script + analytics.js</li>
+                <li><strong>All 8 pages/*.html files</strong> - Added GA4 script + analytics.js:
+                    <ul>
+                        <li>creating-repo.html</li>
+                        <li>definitions.html</li>
+                        <li>github-desktop.html</li>
+                        <li>github-pages.html</li>
+                        <li>github-profile.html</li>
+                        <li>ide-setup.html</li>
+                        <li>templates-opensource.html</li>
+                        <li>updating-repo.html</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Events Tracked:</h3>
+            <ul>
+                <li>✅ <strong>page_view</strong> - All page visits (hub + 8 detail pages)</li>
+                <li>✅ <strong>node_clicked</strong> - Roadmap navigation (desktop SVG + mobile grid)</li>
+                <li>✅ <strong>theme_changed</strong> - Dark/light theme toggle</li>
+                <li>✅ <strong>font_accessibility_toggled</strong> - Accessible fonts on/off</li>
+                <li>✅ <strong>tab_clicked</strong> - Tab navigation within pages</li>
+                <li>✅ <strong>external_link_clicked</strong> - External resource links</li>
+                <li>✅ <strong>back_to_map_clicked</strong> - Return to hub clicks</li>
+            </ul>
+
+            <h3>Pages Tracked:</h3>
+            <ol>
+                <li>GitHub Setup Starmap Hub (index.html)</li>
+                <li>Definitions & Lingo</li>
+                <li>GitHub Profile Set-up</li>
+                <li>GitHub Desktop Set-up</li>
+                <li>IDE Set-up (VS Code)</li>
+                <li>Creating a Repository</li>
+                <li>Updating a Repository</li>
+                <li>Templates & Open Source</li>
+                <li>GitHub Pages (Deployment)</li>
+            </ol>
+        </div>
+
+        <footer>
+            <strong>Measurement ID:</strong> G-E0WM5HF6FJ<br>
+            <strong>Stream ID:</strong> 13267296785<br><br>
+            GitHub Setup Starmap - Google Analytics 4 Implementation
+        </footer>
+    </div>
+</body>
+</html>

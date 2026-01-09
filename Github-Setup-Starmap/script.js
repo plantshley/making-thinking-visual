@@ -118,6 +118,11 @@ function initThemeToggle() {
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('github-roadmap-theme', newTheme);
 
+            // Track theme change
+            if (typeof trackThemeChange !== 'undefined') {
+                trackThemeChange(newTheme, currentTheme);
+            }
+
             // Reinitialize particles with new colors
             initParticles();
 
@@ -191,10 +196,16 @@ function initFontToggle() {
                 html.removeAttribute('data-accessible-fonts');
                 fontToggle.classList.remove('active');
                 localStorage.setItem('github-roadmap-accessible-fonts', 'false');
+
+                // Track font toggle OFF
+                if (typeof trackFontToggle !== 'undefined') trackFontToggle(false);
             } else {
                 html.setAttribute('data-accessible-fonts', 'true');
                 fontToggle.classList.add('active');
                 localStorage.setItem('github-roadmap-accessible-fonts', 'true');
+
+                // Track font toggle ON
+                if (typeof trackFontToggle !== 'undefined') trackFontToggle(true);
             }
         });
     }
@@ -221,6 +232,14 @@ function initNodeAnimations() {
         // Add sparkle effect on hover
         node.addEventListener('mouseenter', () => {
             createSparkles(node);
+        });
+
+        // Track node clicks (DESKTOP)
+        node.addEventListener('click', () => {
+            const nodeName = node.querySelector('.node-label')?.textContent?.trim();
+            if (nodeName && typeof trackNodeClick !== 'undefined') {
+                trackNodeClick(nodeName, 'desktop');
+            }
         });
     });
 }
@@ -466,6 +485,14 @@ function initTabs() {
 
                 // Add active to clicked button
                 this.classList.add('active');
+
+                // Track tab click
+                const tabName = this.textContent.trim();
+                const tabGroup = this.closest('.content-section')?.id ||
+                                 this.closest('section')?.id || 'unknown';
+                if (typeof trackTabClick !== 'undefined') {
+                    trackTabClick(tabGroup, tabName);
+                }
 
                 // Find and activate target content
                 const targetContent = document.getElementById(targetId);
@@ -747,10 +774,68 @@ function initCursorTrail() {
 }
 
 // ========================================
+// ANALYTICS TRACKING
+// ========================================
+
+function initMobileNavTracking() {
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    mobileNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const nodeName = item.textContent.trim();
+            if (typeof trackNodeClick !== 'undefined') {
+                trackNodeClick(nodeName, 'mobile');
+            }
+        });
+    });
+}
+
+function initExternalLinkTracking() {
+    const externalLinks = document.querySelectorAll('a[target="_blank"][rel*="noopener"]');
+    externalLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const url = link.href;
+            const label = link.textContent.trim();
+
+            // Determine platform
+            let platform = 'external';
+            if (url.includes('github.com')) platform = 'github';
+            else if (url.includes('code.visualstudio.com')) platform = 'vscode';
+            else if (url.includes('desktop.github.com')) platform = 'github-desktop';
+            else if (url.includes('anthropic.com')) platform = 'anthropic';
+
+            if (typeof trackExternalLink !== 'undefined') {
+                trackExternalLink(platform, url, label);
+            }
+        });
+    });
+}
+
+function initBackToMapTracking() {
+    const backLinks = document.querySelectorAll('.back-link');
+    backLinks.forEach(backLink => {
+        backLink.addEventListener('click', () => {
+            const currentPage = document.querySelector('.page-title')?.textContent || 'Unknown Page';
+            if (typeof trackBackToMap !== 'undefined') {
+                trackBackToMap(currentPage);
+            }
+        });
+    });
+}
+
+// ========================================
 // INITIALIZE ALL
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Track page view
+    const isIndexPage = window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/');
+    if (isIndexPage) {
+        if (typeof trackPageView !== 'undefined') trackPageView('GitHub Setup Starmap Hub');
+    } else {
+        const pageTitle = document.querySelector('.page-title')?.textContent || document.title;
+        if (typeof trackPageView !== 'undefined') trackPageView(pageTitle);
+    }
+
     // Core functionality
     initParticles();
     initThemeToggle();
@@ -771,6 +856,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initScrollToTop();
     initKeyboardNav();
+
+    // Analytics tracking
+    initMobileNavTracking();
+    initExternalLinkTracking();
+    initBackToMapTracking();
 
     // Fun extras
     initKonamiCode();
