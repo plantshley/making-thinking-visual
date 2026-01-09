@@ -25,12 +25,12 @@ Resources for the two tool options you can choose from for the mental model assi
 
 * **Tool 1: Creative Visualization ([Canva](https://www.canva.com/))**
   * Best for: Flexible visual modalities (including infographics, AI-powered coding, slide decks, collages, whiteboards etc.) and creative freedom.
-  * [Getting Started in Canva](Tool%20Resources%20-%20Canva/Getting-Started-with-Canva.md)
+  * [Getting Started with Canva](Tool%20Resources%20-%20Canva/Getting-Started-with-Canva.md)
   * [Recommended Templates](Tool%20Resources%20-%20Canva/Recommended-Templates.md)
 
 * **Tool 2: Diagramming & Whiteboarding ([Miro](https://miro.com/))**
   * Best for: Straightforward logic flows, system diagrams, and brainstorming.
-  * [Getting Started in Miro](Tool%20Resources%20-%20Miro/Getting-Started-with-Miro.md)
+  * [Getting Started with Miro](Tool%20Resources%20-%20Miro/Getting-Started-with-Miro.md)
   * [Recommended Templates](Tool%20Resources%20-%20Miro/Recommended-Templates.md)
   * Join the class team on Miro - *[Making Thinking Visual Team](https://miro.com/welcome/bkJIU3M0c01DbWJ1WEJBb1NaTFVhdUE1VWh6OTArNWtiS2lJUlo1TWwrNEJoVWw1bnNFMXc5eGhPYjR6cXg3aHJESDBOaW0rdCtJV2IzQkRna0dvZ1lWT0lTbkRFZjg1UWtkY3QzYWRrd3cvOGU0bmZqZEN3bVJlWk52MWV1dGhyVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=536258432912)*
 
