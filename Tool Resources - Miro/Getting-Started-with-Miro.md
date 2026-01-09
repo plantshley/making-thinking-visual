@@ -21,9 +21,10 @@ Sign up at [miro.com](https://miro.com/) using your student email
 ### 3. Join Our Class Team (if you want!)
 Join the Making Thinking Visual team workspace:
 
-🔗 **[Join the Making Thinking Visual Miro Team](https://miro.com/welcome/bkJIU3M0c01DbWJ1WEJBb1NaTFVhdUE1VWh6OTArNWtiS2lJUlo1TWwrNEJoVWw1bnNFMXc5eGhPYjR6cXg3aHJESDBOaW0rdCtJV2IzQkRna0dvZ1lWT0lTbkRFZjg1UWtkY3QzYWRrd3gvRHFYUU1SMlJkUmJDbHZ3VHQ1Zy9BS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=546848748119)**
+🔗 **[Making Thinking Visual Miro Team](https://miro.com/welcome/bkJIU3M0c01DbWJ1WEJBb1NaTFVhdUE1VWh6OTArNWtiS2lJUlo1TWwrNEJoVWw1bnNFMXc5eGhPYjR6cXg3aHJESDBOaW0rdCtJV2IzQkRna0dvZ1lWT0lTbkRFZjg1UWtkY3QzYWRrd3gvRHFYUU1SMlJkUmJDbHZ3VHQ1Zy9BS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=546848748119)**
 
 This gives you access to shared templates, examples, and collaboration with classmates.
+
 
 ### 4. Learn the Basics
 Follow Miro's official guide: [How to Use Miro](https://miro.com/how-to-use-miro/#getting-started-in-miro)
@@ -66,7 +67,7 @@ Follow Miro's official guide: [How to Use Miro](https://miro.com/how-to-use-miro
 
 ## 🎯 Getting Started Tips
 
-1. **Start with a template**: Browse the template library instead of a blank board
+1. **Start with a template**: Browse the template library (or our [Recommended Templates](Tool%20Resources%20-%20Miro/Recommended-Templates.md)) instead of a blank board
 2. **Use sticky notes**: Great for quickly capturing and rearranging ideas
 3. **Try the toolbar**: Explore shapes, connectors, text, and drawing tools
 4. **Zoom in and out**: Use your mouse wheel to navigate the infinite canvas

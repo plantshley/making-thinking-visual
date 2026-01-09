@@ -6,7 +6,7 @@ Welcome! Canva is a user-friendly design platform perfect for creating visual me
 
 1. **Sign Up**: Create a free account at [canva.com](https://www.canva.com/)
 2. **No Experience Required**: Jump in and start designing immediately—no training needed!
-3. **Choose Your Path**: Start from a blank canvas or use one of thousands of templates
+3. **Choose Your Path**: Start from a blank canvas, use one of thousands of templates, or launch with one of our [recommended templates](Tool%20Resources%20-%20Canva/Recommended-Templates.md)
 
 ### 📚 Official Beginner's Guide
 Follow Canva's step-by-step tutorial: [How to Use Canva - Beginner's Guide](https://www.canva.com/learn/how-to-canva-beginners-guide/)
@@ -35,8 +35,8 @@ Follow Canva's step-by-step tutorial: [How to Use Canva - Beginner's Guide](http
 - **Interactive experiences**: Create games, quizzes, or interactive webpages as mental model visualizations
 - **Beyond static visuals**: Explore coding as a creative mode of representing your thinking
 - **Example applications**:
-  - Build a simple game that teaches your concept
-  - Create an interactive webpage with clickable elements that explain relationships
+  - Build a 3D scene or representation of your model
+  - Create an interactive game or webpage with clickable elements that explain relationships
   - Design a quiz or decision tree to demonstrate your mental model
 - **No coding experience required**: Use AI prompts to generate the code, then customize in Canva or export to your repo
 

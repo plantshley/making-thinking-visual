@@ -2,13 +2,13 @@
 
 These templates serve as **starting points and inspiration** for the visual structure you might use to represent your mental model. Focus on the *structure and layout*, not the specific content or instructions shown in each template. Feel free to adapt, mix, or completely reimagine any template to fit your thinking style!
 
-To use, simply click the template and make a copy (duplicate) to your Miro account!
+To use, simply click the template name to open it in Miro, then make a copy (duplicate) to your  account!
 
 You can also see and copy any of the templates if you have joined the **[Making Thinking Visual Miro Team](https://miro.com/welcome/bkJIU3M0c01DbWJ1WEJBb1NaTFVhdUE1VWh6OTArNWtiS2lJUlo1TWwrNEJoVWw1bnNFMXc5eGhPYjR6cXg3aHJESDBOaW0rdCtJV2IzQkRna0dvZ1lWT0lTbkRFZjg1UWtkY3QzYWRrd3gvRHFYUU1SMlJkUmJDbHZ3VHQ1Zy9BS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=546848748119)** 🤓
 
 ---
 
-<h2 align="center">Template Gallery</h2>
+<h2 align="center">🌈🌟🧩Template Gallery🧩🌟🌈</h2>
 
 <div align="center">
 <table>

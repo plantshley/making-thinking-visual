@@ -2,26 +2,20 @@
 
 These templates serve as **starting points and inspiration** for the visual structure you might use to represent your mental model. Focus on the *structure and layout*, not the specific content or instructions shown in each template. You should adapt, mix, or completely reimagine any template to fit your thinking style!
 
-To use, simply click the template to open it in Canva and customize!
+To use, simply click the template name to open it in Canva and customize!
 
 ---
 
-<h2 align="center">Template Gallery</h2>
+<h2 align="center">🌈🌟🎨Template Gallery🎨🌟🌈</h2>
 
 <div align="center">
 <table>
   <tr>
     <td align="center" width="25%">
-      <a href="https://www.canva.com/templates/EAGtUCMOPMw/">
-        <img src="thumbnails/lake-of-ideas.png" alt="Lake of Ideas" width="180" height="180" style="border-radius: 15px; object-fit: cover;">
-      </a>
-      <br><strong><a href="https://www.canva.com/templates/EAGtUCMOPMw/">Lake of Ideas</a></strong>
-    </td>
-    <td align="center" width="25%">
       <a href="https://www.canva.com/templates/EAGtOGNK8KM/">
-        <img src="thumbnails/vision-board-scrapbook.png" alt="Vision Board (Scrapbook)" width="180" height="180" style="border-radius: 15px; object-fit: cover;">
+        <img src="thumbnails/vision-board-scrapbook.png" alt="Vision Board (Collage)" width="180" height="180" style="border-radius: 15px; object-fit: cover;">
       </a>
-      <br><strong><a href="https://www.canva.com/templates/EAGtOGNK8KM/">Vision Board (Scrapbook)</a></strong>
+      <br><strong><a href="https://www.canva.com/templates/EAGtOGNK8KM/">Vision Board (Collage)</a></strong>
     </td>
     <td align="center" width="25%">
       <a href="https://www.canva.com/templates/EAGzRyuQFvQ/">
@@ -35,13 +29,19 @@ To use, simply click the template to open it in Canva and customize!
       </a>
       <br><strong><a href="https://www.canva.com/templates/EAFJY5Rv_uA/">Mood Board (Collage)</a></strong>
     </td>
-  </tr>
-  <tr>
     <td align="center" width="25%">
       <a href="https://www.canva.com/templates/EAFEZx89MSo/">
         <img src="thumbnails/collage.png" alt="Mood Board (Grid)" width="180" height="180" style="border-radius: 15px; object-fit: cover;">
       </a>
       <br><strong><a href="https://www.canva.com/templates/EAFEZx89MSo/">Mood Board (Grid)</a></strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="25%">
+      <a href="https://www.canva.com/templates/EAGtUCMOPMw/">
+        <img src="thumbnails/lake-of-ideas.png" alt="Lake of Ideas" width="180" height="180" style="border-radius: 15px; object-fit: cover;">
+      </a>
+      <br><strong><a href="https://www.canva.com/templates/EAGtUCMOPMw/">Lake of Ideas</a></strong>
     </td>
     <td align="center" width="25%">
       <a href="https://www.canva.com/templates/EAFr6r4-onI/">
