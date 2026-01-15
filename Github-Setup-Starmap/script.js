@@ -46,7 +46,7 @@ async function initParticles() {
         },
         particles: {
             color: {
-                value: isDark ? ["#ffffff", "#a855f7", "#ff6b9d", "#06b6d4"] : ["#667eea", "#764ba2", "#ff6b9d", "#06b6d4"]
+                value: isDark ? ["#ffffff", "#a855f7", "#ff6bbcff", "#06b6d4"] : ["#f0bb58ff", "#ae5cffff", "rgba(255, 111, 229, 1)", "rgba(49, 236, 195, 1)"]
             },
             links: {
                 color: isDark ? "#a855f7" : "#764ba2",
