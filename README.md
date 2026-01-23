@@ -2,6 +2,12 @@
 
 Welcome to the **Making Thinking Visible** resource hub. This repository serves as your main access point for all guides, links, and technical instructions required for the semester's mental model assignments. After making your GitHub profile, star and watch this repo! 
 
+<div align="center">
+ 
+✨💫 [GITHUB SETUP STARMAP](https://plantshley.github.io/making-thinking-visual/)  &nbsp;&nbsp;|&nbsp;&nbsp;  [STUDENT GALLERY](https://plantshley.github.io/student-model-gallery/)  &nbsp;&nbsp;|&nbsp;&nbsp;  [UNIVERSE OF TOOLS PERSONA QUEST](https://plantshley.github.io/web-tools-persona-quest/) 🦄✨
+
+</div>
+
 ## Course Philosophy
 
 This course focuses on building mental models to represent complex engineering concepts.
