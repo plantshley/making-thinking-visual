@@ -680,6 +680,8 @@ function activateRainbowMode() {
 
 function initTypingEffect() {
     const subtitle = document.querySelector('.subtitle');
+    const beginnerHint = document.getElementById('beginner-hint');
+
     if (subtitle) {
         const text = subtitle.textContent;
         subtitle.textContent = '';
@@ -694,6 +696,27 @@ function initTypingEffect() {
                 clearInterval(typeInterval);
                 setTimeout(() => {
                     subtitle.style.borderRight = 'none';
+
+                    // Start typing the beginner hint after subtitle completes
+                    if (beginnerHint) {
+                        const hintText = beginnerHint.textContent;
+                        beginnerHint.textContent = '';
+                        beginnerHint.style.visibility = 'visible';
+                        beginnerHint.style.borderRight = '2px solid var(--accent-purple)';
+
+                        let j = 0;
+                        const hintInterval = setInterval(() => {
+                            if (j < hintText.length) {
+                                beginnerHint.textContent += hintText.charAt(j);
+                                j++;
+                            } else {
+                                clearInterval(hintInterval);
+                                setTimeout(() => {
+                                    beginnerHint.style.borderRight = 'none';
+                                }, 500);
+                            }
+                        }, 50);
+                    }
                 }, 500);
             }
         }, 50);
@@ -772,6 +795,10 @@ function initCursorTrail() {
         animateTrail();
     }
 }
+
+// ========================================
+// CURVED TEXT EFFECT
+// ========================================
 
 // ========================================
 // ANALYTICS TRACKING
