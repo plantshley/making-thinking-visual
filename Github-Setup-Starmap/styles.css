@@ -1413,7 +1413,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: var(--space-md);
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
     flex-wrap: wrap;
 }
