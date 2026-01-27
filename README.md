@@ -55,7 +55,7 @@ Detailed instructions on how to submit your assignments. You can choose from fou
 
 ## Final Project & Student Gallery
 
-For the final project, after going on the *[Universe of Tools Persona Quest](https://plantshley.github.io/web-tools-persona-quest/)*, you will have complete freedom to choose any tool and method for creating your final mental model. All final projects will be collected in the class **Student Gallery**, and all students will submit a **Pull Request (PR)** to the gallery repository.
+For the final project, after going on the *[Universe of Tools Persona Quest](https://plantshley.github.io/web-tools-persona-quest/)*, you will have complete freedom to choose any tool(s) and method for creating your final video walkthrough. The quest is meant to help you see what web or AI tools might be most helpful for you to create your video (for things like audio, video generation/editing, graphics, etc.). All final projects will be collected in the class **Student Gallery**, and all students will submit a **Pull Request (PR)** to the gallery repository.
 
 * 🔗 **[Go on the quest 🦄🚀✨](https://plantshley.github.io/web-tools-persona-quest/)** to discover new web tools that match your preferences!
 * 🔗 Visit the **[Student Gallery Repository](https://github.com/plantshley/student-model-gallery.git)** for detailed requirements and step-by-step instructions. 
